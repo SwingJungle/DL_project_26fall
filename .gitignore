@@ -11,6 +11,7 @@ Qwen.txt
 
 # documents and images (report lives outside this repository)
 *.md
+!README.md
 *.pdf
 *.docx
 *.pages
