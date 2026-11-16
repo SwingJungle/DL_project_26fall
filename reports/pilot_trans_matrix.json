@@ -1,0 +1,213 @@
+{
+  "n_messages": 200,
+  "n_predictions": 896,
+  "n_docs": 25,
+  "full": {
+    "n_correct": 1078,
+    "n_questions": 1116,
+    "accuracy": 0.9659498207885304
+  },
+  "by_method": {
+    "abstractive": {
+      "cells": {
+        "self": {
+          "n_correct": 928,
+          "n_questions": 1106,
+          "accuracy": 0.8390596745027125,
+          "n_records": 99
+        },
+        "same": {
+          "n_correct": 951,
+          "n_questions": 1106,
+          "accuracy": 0.8598553345388789,
+          "n_records": 99
+        },
+        "cross_matched": {
+          "n_correct": 945,
+          "n_questions": 1106,
+          "accuracy": 0.8544303797468354,
+          "n_records": 99
+        },
+        "cross_unmatched": {
+          "n_correct": 937,
+          "n_questions": 1106,
+          "accuracy": 0.8471971066907775,
+          "n_records": 99
+        }
+      },
+      "self_advantage": -0.015370705244122984,
+      "self_advantage_ci": [
+        -0.03183520599250933,
+        0.0
+      ],
+      "family_advantage": 0.005424954792043413
+    },
+    "structured": {
+      "cells": {
+        "self": {
+          "n_correct": 888,
+          "n_questions": 1116,
+          "accuracy": 0.7956989247311828,
+          "n_records": 100
+        },
+        "same": {
+          "n_correct": 862,
+          "n_questions": 1116,
+          "accuracy": 0.7724014336917563,
+          "n_records": 100
+        },
+        "cross_matched": {
+          "n_correct": 893,
+          "n_questions": 1116,
+          "accuracy": 0.8001792114695341,
+          "n_records": 100
+        },
+        "cross_unmatched": {
+          "n_correct": 875,
+          "n_questions": 1116,
+          "accuracy": 0.7840501792114696,
+          "n_records": 100
+        }
+      },
+      "self_advantage": -0.0044802867383513245,
+      "self_advantage_ci": [
+        -0.02135231316725983,
+        0.011690647482014427
+      ],
+      "family_advantage": -0.02777777777777779
+    }
+  },
+  "method_main_effect": {
+    "abstractive": {
+      "n_correct": 3761,
+      "n_questions": 4424,
+      "accuracy": 0.8501356238698011
+    },
+    "structured": {
+      "n_correct": 3518,
+      "n_questions": 4464,
+      "accuracy": 0.7880824372759857
+    }
+  },
+  "delta_method": -0.01089041850577166,
+  "by_demand": {
+    "abstractive": {
+      "lookup": {
+        "self": {
+          "n_correct": 755,
+          "n_questions": 908,
+          "accuracy": 0.8314977973568282
+        },
+        "same": {
+          "n_correct": 773,
+          "n_questions": 908,
+          "accuracy": 0.8513215859030837
+        },
+        "cross_matched": {
+          "n_correct": 772,
+          "n_questions": 908,
+          "accuracy": 0.8502202643171806
+        }
+      },
+      "multi-hop": {
+        "self": {
+          "n_correct": 173,
+          "n_questions": 198,
+          "accuracy": 0.8737373737373737
+        },
+        "same": {
+          "n_correct": 178,
+          "n_questions": 198,
+          "accuracy": 0.898989898989899
+        },
+        "cross_matched": {
+          "n_correct": 173,
+          "n_questions": 198,
+          "accuracy": 0.8737373737373737
+        }
+      }
+    },
+    "structured": {
+      "lookup": {
+        "self": {
+          "n_correct": 734,
+          "n_questions": 916,
+          "accuracy": 0.8013100436681223
+        },
+        "same": {
+          "n_correct": 712,
+          "n_questions": 916,
+          "accuracy": 0.777292576419214
+        },
+        "cross_matched": {
+          "n_correct": 734,
+          "n_questions": 916,
+          "accuracy": 0.8013100436681223
+        }
+      },
+      "multi-hop": {
+        "self": {
+          "n_correct": 154,
+          "n_questions": 200,
+          "accuracy": 0.77
+        },
+        "same": {
+          "n_correct": 150,
+          "n_questions": 200,
+          "accuracy": 0.75
+        },
+        "cross_matched": {
+          "n_correct": 159,
+          "n_questions": 200,
+          "accuracy": 0.795
+        }
+      }
+    }
+  },
+  "by_sender": {
+    "abstractive": {
+      "deepseek-v4-flash-0731": {
+        "self": 0.7777777777777778,
+        "cross_matched": 0.8351254480286738,
+        "self_advantage": -0.05734767025089604
+      },
+      "deepseek-v4-pro-0813": {
+        "self": 0.9175627240143369,
+        "cross_matched": 0.931899641577061,
+        "self_advantage": -0.014336917562724039
+      },
+      "qwen3.7-max": {
+        "self": 0.8100358422939068,
+        "cross_matched": 0.8530465949820788,
+        "self_advantage": -0.043010752688172005
+      },
+      "qwen3.7-plus": {
+        "self": 0.8513011152416357,
+        "cross_matched": 0.7955390334572491,
+        "self_advantage": 0.055762081784386575
+      }
+    },
+    "structured": {
+      "deepseek-v4-flash-0731": {
+        "self": 0.7060931899641577,
+        "cross_matched": 0.7562724014336918,
+        "self_advantage": -0.05017921146953408
+      },
+      "deepseek-v4-pro-0813": {
+        "self": 0.910394265232975,
+        "cross_matched": 0.8781362007168458,
+        "self_advantage": 0.032258064516129115
+      },
+      "qwen3.7-max": {
+        "self": 0.7168458781362007,
+        "cross_matched": 0.7706093189964157,
+        "self_advantage": -0.053763440860215006
+      },
+      "qwen3.7-plus": {
+        "self": 0.8494623655913979,
+        "cross_matched": 0.7956989247311828,
+        "self_advantage": 0.05376344086021512
+      }
+    }
+  }
+}

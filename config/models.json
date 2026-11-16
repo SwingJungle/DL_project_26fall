@@ -1,0 +1,65 @@
+{
+  "gateway": {
+    "base_url_key": "URL_OPENAI",
+    "credential_files": ["Qwen.txt", ".env"],
+    "chat_path": "/chat/completions",
+    "timeout_s": 180
+  },
+  "defaults": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "enable_thinking": false
+  },
+  "providers": {
+    "qwen": {
+      "family": "A",
+      "api_style": "openai_compatible",
+      "thinking_param": "enable_thinking"
+    },
+    "deepseek": {
+      "family": "B",
+      "api_style": "openai_compatible",
+      "thinking_param": "enable_thinking"
+    }
+  },
+  "models": {
+    "qwen3.7-plus": {
+      "provider": "qwen",
+      "family": "A",
+      "tier": "s",
+      "pair_code": "As",
+      "api_model": "qwen3.7-plus"
+    },
+    "qwen3.7-max": {
+      "provider": "qwen",
+      "family": "A",
+      "tier": "l",
+      "pair_code": "Al",
+      "api_model": "qwen3.7-max"
+    },
+    "deepseek-v4-flash-0731": {
+      "provider": "deepseek",
+      "family": "B",
+      "tier": "s",
+      "pair_code": "Bs",
+      "api_model": "deepseek-v4-flash-0731"
+    },
+    "deepseek-v4-pro-0813": {
+      "provider": "deepseek",
+      "family": "B",
+      "tier": "l",
+      "pair_code": "Bl",
+      "api_model": "deepseek-v4-pro-0813"
+    }
+  },
+  "pairs": {
+    "As": "qwen3.7-plus",
+    "Al": "qwen3.7-max",
+    "Bs": "deepseek-v4-flash-0731",
+    "Bl": "deepseek-v4-pro-0813"
+  },
+  "pricing": {
+    "_note": "token-plan 订阅制网关，D-2 未确认美元单价；留空表示成本按 0 记账，额度由 BudgetGuard 的 calls/tokens 上限控制。",
+    "prices": {}
+  }
+}

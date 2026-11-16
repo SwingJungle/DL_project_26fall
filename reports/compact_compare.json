@@ -1,0 +1,112 @@
+{
+  "cells": {
+    "abstractive": {
+      "n_correct": 3503,
+      "n_questions": 4400,
+      "accuracy": 0.7961363636363636
+    },
+    "structured": {
+      "n_correct": 3106,
+      "n_questions": 4400,
+      "accuracy": 0.7059090909090909
+    },
+    "compact": {
+      "n_correct": 3239,
+      "n_questions": 4400,
+      "accuracy": 0.7361363636363636
+    }
+  },
+  "cells_ci": {
+    "abstractive": {
+      "point": 0.7961363636363636,
+      "ci_lo": 0.7821557971014492,
+      "ci_hi": 0.8102820746132848
+    },
+    "structured": {
+      "point": 0.7059090909090909,
+      "ci_lo": 0.6909881061299177,
+      "ci_hi": 0.7213114754098361
+    },
+    "compact": {
+      "point": 0.7361363636363636,
+      "ci_lo": 0.720972097209721,
+      "ci_hi": 0.7511301989150091
+    }
+  },
+  "comparisons": {
+    "compact_vs_structured": {
+      "n_pairs": 4400,
+      "both_correct": 2757,
+      "both_wrong": 812,
+      "a_only_correct": 482,
+      "b_only_correct": 349,
+      "accuracy_a": 0.7361363636363636,
+      "accuracy_b": 0.7059090909090909,
+      "diff_a_minus_b": 0.030227272727272658,
+      "mcnemar_p": 4.469070147970441e-06,
+      "ci_lo": 0.017969451931716084,
+      "ci_hi": 0.042902066486972146
+    },
+    "compact_vs_abstractive": {
+      "n_pairs": 4400,
+      "both_correct": 2921,
+      "both_wrong": 579,
+      "a_only_correct": 318,
+      "b_only_correct": 582,
+      "accuracy_a": 0.7361363636363636,
+      "accuracy_b": 0.7961363636363636,
+      "diff_a_minus_b": -0.06000000000000005,
+      "mcnemar_p": 1.0447088167081738e-18,
+      "ci_lo": -0.07486263736263736,
+      "ci_hi": -0.04562043795620438
+    },
+    "abstractive_vs_structured": {
+      "n_pairs": 4400,
+      "both_correct": 2832,
+      "both_wrong": 623,
+      "a_only_correct": 671,
+      "b_only_correct": 274,
+      "accuracy_a": 0.7961363636363636,
+      "accuracy_b": 0.7059090909090909,
+      "diff_a_minus_b": 0.09022727272727271,
+      "mcnemar_p": 4.158775151013354e-39,
+      "ci_lo": 0.07653985507246377,
+      "ci_hi": 0.1046831955922865
+    }
+  },
+  "compliance": {
+    "compact": {
+      "n": 400,
+      "compliant": 167,
+      "bytes": 173222,
+      "compliant_rate": 0.4175,
+      "mean_bytes": 433.055
+    },
+    "abstractive": {
+      "n": 400,
+      "compliant": 191,
+      "bytes": 183643,
+      "compliant_rate": 0.4775,
+      "mean_bytes": 459.1075
+    },
+    "structured": {
+      "n": 400,
+      "compliant": 227,
+      "bytes": 177706,
+      "compliant_rate": 0.5675,
+      "mean_bytes": 444.265
+    }
+  },
+  "retention": {
+    "compact": 0.7400907499999999,
+    "abstractive": 0.79272275,
+    "structured": 0.68307075
+  },
+  "n_rows": 13200,
+  "n_docs": 100,
+  "n_senders": 4,
+  "bootstrap": {
+    "n_boot": 4000,
+    "seed": 11
+  }
+}

@@ -1,0 +1,1552 @@
+{
+  "datasets": {
+    "p0.9": {
+      "label": "P0.9 density ladder (v2 corpus, readable, b57/b69/b82)",
+      "messages": "results/messages_p0.9.jsonl",
+      "predictions": "results/predictions_p0.9.jsonl",
+      "n_messages": 240,
+      "n_questions": 2640,
+      "compliance": {
+        "abstractive": {
+          "n_messages": 120,
+          "n_empty": 0,
+          "first_attempt_compliant": 34,
+          "median_ratio": 0.5205,
+          "band": {
+            "pm2": {
+              "n_in_band": 64,
+              "compliance_rate": 0.5333333333333333,
+              "n_under": 18,
+              "n_over": 38
+            },
+            "pm5": {
+              "n_in_band": 87,
+              "compliance_rate": 0.725,
+              "n_under": 10,
+              "n_over": 23
+            },
+            "pm8": {
+              "n_in_band": 108,
+              "compliance_rate": 0.9,
+              "n_under": 6,
+              "n_over": 6
+            }
+          }
+        },
+        "structured": {
+          "n_messages": 120,
+          "n_empty": 0,
+          "first_attempt_compliant": 38,
+          "median_ratio": 0.5088999999999999,
+          "band": {
+            "pm2": {
+              "n_in_band": 65,
+              "compliance_rate": 0.5416666666666666,
+              "n_under": 23,
+              "n_over": 32
+            },
+            "pm5": {
+              "n_in_band": 97,
+              "compliance_rate": 0.8083333333333333,
+              "n_under": 12,
+              "n_over": 11
+            },
+            "pm8": {
+              "n_in_band": 108,
+              "compliance_rate": 0.9,
+              "n_under": 7,
+              "n_over": 5
+            }
+          }
+        }
+      },
+      "per_model": {
+        "deepseek-v4-flash-0731": {
+          "n": 60,
+          "compliant": 27,
+          "rate": 0.45
+        },
+        "deepseek-v4-pro-0813": {
+          "n": 60,
+          "compliant": 18,
+          "rate": 0.3
+        },
+        "qwen3.7-max": {
+          "n": 60,
+          "compliant": 54,
+          "rate": 0.9
+        },
+        "qwen3.7-plus": {
+          "n": 60,
+          "compliant": 30,
+          "rate": 0.5
+        }
+      },
+      "accuracy_by_ratio_bin": {
+        "0.00-0.40": {
+          "abstractive": {
+            "n_questions": 34,
+            "accuracy": 0.8235294117647058
+          },
+          "structured": {
+            "n_questions": 44,
+            "accuracy": 0.7045454545454546
+          }
+        },
+        "0.40-0.44": {
+          "abstractive": {
+            "n_questions": 228,
+            "accuracy": 0.8728070175438597
+          },
+          "structured": {
+            "n_questions": 254,
+            "accuracy": 0.7992125984251969
+          }
+        },
+        "0.44-0.48": {
+          "abstractive": {
+            "n_questions": 203,
+            "accuracy": 0.812807881773399
+          },
+          "structured": {
+            "n_questions": 195,
+            "accuracy": 0.8102564102564103
+          }
+        },
+        "0.48-0.52": {
+          "abstractive": {
+            "n_questions": 173,
+            "accuracy": 0.8786127167630058
+          },
+          "structured": {
+            "n_questions": 217,
+            "accuracy": 0.8341013824884793
+          }
+        },
+        "0.52-0.56": {
+          "abstractive": {
+            "n_questions": 165,
+            "accuracy": 0.8545454545454545
+          },
+          "structured": {
+            "n_questions": 191,
+            "accuracy": 0.7643979057591623
+          }
+        },
+        "0.56-0.60": {
+          "abstractive": {
+            "n_questions": 151,
+            "accuracy": 0.8410596026490066
+          },
+          "structured": {
+            "n_questions": 99,
+            "accuracy": 0.8585858585858586
+          }
+        },
+        "0.60-0.70": {
+          "abstractive": {
+            "n_questions": 344,
+            "accuracy": 0.8372093023255814
+          },
+          "structured": {
+            "n_questions": 268,
+            "accuracy": 0.7611940298507462
+          }
+        },
+        "0.70-1.10": {
+          "abstractive": {
+            "n_questions": 22,
+            "accuracy": 0.9545454545454546
+          },
+          "structured": {
+            "n_questions": 52,
+            "accuracy": 0.8269230769230769
+          }
+        }
+      },
+      "compliant_subset_gap": {
+        "all": {
+          "abs_n": 1320,
+          "abs_accuracy": 0.8492424242424242,
+          "struct_n": 1320,
+          "struct_accuracy": 0.7962121212121213,
+          "method_gap": 0.05303030303030298
+        },
+        "compliant_only": {
+          "abs_n": 699,
+          "abs_accuracy": 0.8412017167381974,
+          "struct_n": 720,
+          "struct_accuracy": 0.7875,
+          "method_gap": 0.05370171673819746
+        }
+      },
+      "lpm": {
+        "beta": [
+          0.9249043431593027,
+          -0.05190435266082563,
+          0.11515460986697655,
+          -0.059221896711813986,
+          -0.048632075896804745,
+          -0.0508439128016501,
+          -0.059221896711812404,
+          -0.048632075896802865,
+          -0.05084391280165121
+        ],
+        "se": [
+          0.012837755237953937,
+          0.013644359944438446,
+          0.07453273954735495,
+          0.009628803882519115,
+          0.008289738793599264,
+          0.009568112574519469,
+          0.009628803882519044,
+          0.008289738793599264,
+          0.009568112574519469
+        ],
+        "z": [
+          72.04564396311957,
+          -3.8040884931346506,
+          1.5450204912139607,
+          -6.15049360589118,
+          -5.866538995698503,
+          -5.313891575340667,
+          -6.150493605891061,
+          -5.866538995698276,
+          -5.313891575340782
+        ],
+        "p": [
+          0.0,
+          0.0001423272972089773,
+          0.12234130698265933,
+          7.724216821713981e-10,
+          4.4498564832906595e-09,
+          1.0730848254425496e-07,
+          7.724216821713981e-10,
+          4.4498564832906595e-09,
+          1.0730848254425496e-07
+        ],
+        "n": 2640,
+        "clusters": 240,
+        "names": [
+          "intercept",
+          "struct",
+          "ratio_c",
+          "sender:deepseek-v4-pro-0813",
+          "sender:qwen3.7-max",
+          "sender:qwen3.7-plus",
+          "receiver:deepseek-v4-pro-0813",
+          "receiver:qwen3.7-max",
+          "receiver:qwen3.7-plus"
+        ],
+        "method_effect": {
+          "coef": -0.05190435266082563,
+          "se": 0.013644359944438446,
+          "p": 0.0001423272972089773,
+          "ci95": [
+            -0.07864729815192498,
+            -0.02516140716972628
+          ]
+        },
+        "ratio_slope": {
+          "coef": 0.11515460986697655,
+          "se": 0.07453273954735495,
+          "p": 0.12234130698265933,
+          "ci95": [
+            -0.03092955964583917,
+            0.2612387793797923
+          ]
+        }
+      }
+    },
+    "pilot_trans": {
+      "label": "25-doc transmission pilot (v3 b100)",
+      "messages": "results/pilot_trans/messages.jsonl",
+      "predictions": "results/pilot_trans/predictions.jsonl",
+      "n_messages": 200,
+      "n_questions": 8888,
+      "compliance": {
+        "abstractive": {
+          "n_messages": 100,
+          "n_empty": 1,
+          "first_attempt_compliant": 9,
+          "median_ratio": 0.5139,
+          "band": {
+            "pm2": {
+              "n_in_band": 40,
+              "compliance_rate": 0.4,
+              "n_under": 19,
+              "n_over": 41
+            },
+            "pm5": {
+              "n_in_band": 60,
+              "compliance_rate": 0.6,
+              "n_under": 9,
+              "n_over": 31
+            },
+            "pm8": {
+              "n_in_band": 67,
+              "compliance_rate": 0.67,
+              "n_under": 5,
+              "n_over": 28
+            }
+          }
+        },
+        "structured": {
+          "n_messages": 100,
+          "n_empty": 0,
+          "first_attempt_compliant": 1,
+          "median_ratio": 0.61405,
+          "band": {
+            "pm2": {
+              "n_in_band": 6,
+              "compliance_rate": 0.06,
+              "n_under": 6,
+              "n_over": 88
+            },
+            "pm5": {
+              "n_in_band": 28,
+              "compliance_rate": 0.28,
+              "n_under": 0,
+              "n_over": 72
+            },
+            "pm8": {
+              "n_in_band": 35,
+              "compliance_rate": 0.35,
+              "n_under": 0,
+              "n_over": 65
+            }
+          }
+        }
+      },
+      "per_model": {
+        "deepseek-v4-flash-0731": {
+          "n": 50,
+          "compliant": 15,
+          "rate": 0.3
+        },
+        "deepseek-v4-pro-0813": {
+          "n": 50,
+          "compliant": 1,
+          "rate": 0.02
+        },
+        "qwen3.7-max": {
+          "n": 50,
+          "compliant": 21,
+          "rate": 0.42
+        },
+        "qwen3.7-plus": {
+          "n": 50,
+          "compliant": 9,
+          "rate": 0.18
+        }
+      },
+      "accuracy_by_ratio_bin": {
+        "0.00-0.40": {
+          "abstractive": {
+            "n_questions": 96,
+            "accuracy": 0.7291666666666666
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        },
+        "0.40-0.44": {
+          "abstractive": {
+            "n_questions": 224,
+            "accuracy": 0.8303571428571429
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        },
+        "0.44-0.48": {
+          "abstractive": {
+            "n_questions": 488,
+            "accuracy": 0.8442622950819673
+          },
+          "structured": {
+            "n_questions": 264,
+            "accuracy": 0.7083333333333334
+          }
+        },
+        "0.48-0.52": {
+          "abstractive": {
+            "n_questions": 1788,
+            "accuracy": 0.8243847874720358
+          },
+          "structured": {
+            "n_questions": 272,
+            "accuracy": 0.7205882352941176
+          }
+        },
+        "0.52-0.56": {
+          "abstractive": {
+            "n_questions": 452,
+            "accuracy": 0.831858407079646
+          },
+          "structured": {
+            "n_questions": 740,
+            "accuracy": 0.731081081081081
+          }
+        },
+        "0.56-0.60": {
+          "abstractive": {
+            "n_questions": 348,
+            "accuracy": 0.8764367816091954
+          },
+          "structured": {
+            "n_questions": 604,
+            "accuracy": 0.7880794701986755
+          }
+        },
+        "0.60-0.70": {
+          "abstractive": {
+            "n_questions": 892,
+            "accuracy": 0.9170403587443946
+          },
+          "structured": {
+            "n_questions": 1516,
+            "accuracy": 0.7928759894459103
+          }
+        },
+        "0.70-1.10": {
+          "abstractive": {
+            "n_questions": 136,
+            "accuracy": 0.8823529411764706
+          },
+          "structured": {
+            "n_questions": 1068,
+            "accuracy": 0.8576779026217228
+          }
+        }
+      },
+      "compliant_subset_gap": {
+        "all": {
+          "abs_n": 4424,
+          "abs_accuracy": 0.8501356238698011,
+          "struct_n": 4464,
+          "struct_accuracy": 0.7880824372759857,
+          "method_gap": 0.062053186593815424
+        },
+        "compliant_only": {
+          "abs_n": 1788,
+          "abs_accuracy": 0.8243847874720358,
+          "struct_n": 272,
+          "struct_accuracy": 0.7205882352941176,
+          "method_gap": 0.10379655217791817
+        }
+      },
+      "lpm": {
+        "beta": [
+          0.7731214432809909,
+          -0.0802652308620625,
+          0.18035749357762126,
+          0.1094226530962133,
+          0.017410596591347766,
+          0.049161999164699564,
+          0.03960396039603949,
+          0.014851485148514844,
+          0.05310531053105294
+        ],
+        "se": [
+          0.01744142299562105,
+          0.01792453910355235,
+          0.08818052683579763,
+          0.024263250594956307,
+          0.022181936966066115,
+          0.022792498196162605,
+          0.008052343302832663,
+          0.008796875277330309,
+          0.008514996206888439
+        ],
+        "z": [
+          44.32674119967709,
+          -4.477952286435931,
+          2.0453211162308866,
+          4.50981012078239,
+          0.7848997415321513,
+          2.1569377231749254,
+          4.918314943441068,
+          1.688268240745366,
+          6.236680468288635
+        ],
+        "p": [
+          0.0,
+          7.5362439417858695e-06,
+          0.04082321023171609,
+          6.488567636742104e-06,
+          0.4325123536131983,
+          0.031010517170260377,
+          8.729238680782458e-07,
+          0.09135974885119835,
+          4.469535852535955e-10
+        ],
+        "n": 8888,
+        "clusters": 199,
+        "names": [
+          "intercept",
+          "struct",
+          "ratio_c",
+          "sender:deepseek-v4-pro-0813",
+          "sender:qwen3.7-max",
+          "sender:qwen3.7-plus",
+          "receiver:deepseek-v4-pro-0813",
+          "receiver:qwen3.7-max",
+          "receiver:qwen3.7-plus"
+        ],
+        "method_effect": {
+          "coef": -0.0802652308620625,
+          "se": 0.01792453910355235,
+          "p": 7.5362439417858695e-06,
+          "ci95": [
+            -0.1153973275050251,
+            -0.04513313421909989
+          ]
+        },
+        "ratio_slope": {
+          "coef": 0.18035749357762126,
+          "se": 0.08818052683579763,
+          "p": 0.04082321023171609,
+          "ci95": [
+            0.007523660979457891,
+            0.35319132617578464
+          ]
+        }
+      }
+    },
+    "v3probe4": {
+      "label": "readable b100, 10 docs, 4x4",
+      "messages": "results/v3probe4/messages.jsonl",
+      "predictions": "results/v3probe4/predictions_4x4.jsonl",
+      "n_messages": 80,
+      "n_questions": 3584,
+      "compliance": {
+        "abstractive": {
+          "n_messages": 40,
+          "n_empty": 0,
+          "first_attempt_compliant": 10,
+          "median_ratio": 0.50915,
+          "band": {
+            "pm2": {
+              "n_in_band": 20,
+              "compliance_rate": 0.5,
+              "n_under": 6,
+              "n_over": 14
+            },
+            "pm5": {
+              "n_in_band": 32,
+              "compliance_rate": 0.8,
+              "n_under": 1,
+              "n_over": 7
+            },
+            "pm8": {
+              "n_in_band": 35,
+              "compliance_rate": 0.875,
+              "n_under": 0,
+              "n_over": 5
+            }
+          }
+        },
+        "structured": {
+          "n_messages": 40,
+          "n_empty": 0,
+          "first_attempt_compliant": 12,
+          "median_ratio": 0.5065,
+          "band": {
+            "pm2": {
+              "n_in_band": 24,
+              "compliance_rate": 0.6,
+              "n_under": 5,
+              "n_over": 11
+            },
+            "pm5": {
+              "n_in_band": 35,
+              "compliance_rate": 0.875,
+              "n_under": 1,
+              "n_over": 4
+            },
+            "pm8": {
+              "n_in_band": 40,
+              "compliance_rate": 1.0,
+              "n_under": 0,
+              "n_over": 0
+            }
+          }
+        }
+      },
+      "per_model": {
+        "deepseek-v4-flash-0731": {
+          "n": 20,
+          "compliant": 14,
+          "rate": 0.7
+        },
+        "deepseek-v4-pro-0813": {
+          "n": 20,
+          "compliant": 8,
+          "rate": 0.4
+        },
+        "qwen3.7-max": {
+          "n": 20,
+          "compliant": 15,
+          "rate": 0.75
+        },
+        "qwen3.7-plus": {
+          "n": 20,
+          "compliant": 7,
+          "rate": 0.35
+        }
+      },
+      "accuracy_by_ratio_bin": {
+        "0.00-0.40": {
+          "abstractive": {
+            "n_questions": 0,
+            "accuracy": null
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        },
+        "0.40-0.44": {
+          "abstractive": {
+            "n_questions": 40,
+            "accuracy": 0.6
+          },
+          "structured": {
+            "n_questions": 48,
+            "accuracy": 0.7291666666666666
+          }
+        },
+        "0.44-0.48": {
+          "abstractive": {
+            "n_questions": 232,
+            "accuracy": 0.7198275862068966
+          },
+          "structured": {
+            "n_questions": 184,
+            "accuracy": 0.6358695652173914
+          }
+        },
+        "0.48-0.52": {
+          "abstractive": {
+            "n_questions": 888,
+            "accuracy": 0.8006756756756757
+          },
+          "structured": {
+            "n_questions": 1068,
+            "accuracy": 0.6872659176029963
+          }
+        },
+        "0.52-0.56": {
+          "abstractive": {
+            "n_questions": 356,
+            "accuracy": 0.8679775280898876
+          },
+          "structured": {
+            "n_questions": 356,
+            "accuracy": 0.7275280898876404
+          }
+        },
+        "0.56-0.60": {
+          "abstractive": {
+            "n_questions": 136,
+            "accuracy": 0.8823529411764706
+          },
+          "structured": {
+            "n_questions": 136,
+            "accuracy": 0.7279411764705882
+          }
+        },
+        "0.60-0.70": {
+          "abstractive": {
+            "n_questions": 140,
+            "accuracy": 0.75
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        },
+        "0.70-1.10": {
+          "abstractive": {
+            "n_questions": 0,
+            "accuracy": null
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "compliant_subset_gap": {
+        "all": {
+          "abs_n": 1792,
+          "abs_accuracy": 0.8013392857142857,
+          "struct_n": 1792,
+          "struct_accuracy": 0.6941964285714286,
+          "method_gap": 0.1071428571428571
+        },
+        "compliant_only": {
+          "abs_n": 888,
+          "abs_accuracy": 0.8006756756756757,
+          "struct_n": 1068,
+          "struct_accuracy": 0.6872659176029963,
+          "method_gap": 0.11340975807267939
+        }
+      },
+      "lpm": {
+        "beta": [
+          0.8817041660577616,
+          -0.09969650237580815,
+          0.6464926911563891,
+          -0.08522013193161738,
+          -0.09481064067562908,
+          -0.15516076386472497,
+          -0.01116071428571413,
+          -0.014508928571428279,
+          -0.010044642857142407
+        ],
+        "se": [
+          0.020391967288148315,
+          0.02042975148306329,
+          0.33059807214606796,
+          0.02867123152034767,
+          0.0272743951360703,
+          0.029385234711357566,
+          0.004614690728461175,
+          0.004620229130884937,
+          0.005941918241644976
+        ],
+        "z": [
+          43.2378177935879,
+          -4.8799664772456355,
+          1.9555246857905135,
+          -2.9723219901153377,
+          -3.4761775725043416,
+          -5.280228842438152,
+          -2.418518367196366,
+          -3.1403049849714506,
+          -1.6904714014310676
+        ],
+        "p": [
+          0.0,
+          1.0610387426446266e-06,
+          0.05052117258086941,
+          0.0029555654238284657,
+          0.0005086153994624532,
+          1.2902263768488353e-07,
+          0.01558385879194657,
+          0.0016877203195875268,
+          0.09093780505966453
+        ],
+        "n": 3584,
+        "clusters": 80,
+        "names": [
+          "intercept",
+          "struct",
+          "ratio_c",
+          "sender:deepseek-v4-pro-0813",
+          "sender:qwen3.7-max",
+          "sender:qwen3.7-plus",
+          "receiver:deepseek-v4-pro-0813",
+          "receiver:qwen3.7-max",
+          "receiver:qwen3.7-plus"
+        ],
+        "method_effect": {
+          "coef": -0.09969650237580815,
+          "se": 0.02042975148306329,
+          "p": 1.0610387426446266e-06,
+          "ci95": [
+            -0.1397388152826122,
+            -0.05965418946900411
+          ]
+        },
+        "ratio_slope": {
+          "coef": 0.6464926911563891,
+          "se": 0.33059807214606796,
+          "p": 0.05052117258086941,
+          "ci95": [
+            -0.001479530249904104,
+            1.2944649125626824
+          ]
+        }
+      }
+    },
+    "v3base4": {
+      "label": "readable base, 10 docs, 4x4",
+      "messages": "results/v3base4/messages.jsonl",
+      "predictions": "results/v3base4/predictions.jsonl",
+      "n_messages": 80,
+      "n_questions": 3584,
+      "compliance": {
+        "abstractive": {
+          "n_messages": 40,
+          "n_empty": 0,
+          "first_attempt_compliant": 6,
+          "median_ratio": 0.5177,
+          "band": {
+            "pm2": {
+              "n_in_band": 16,
+              "compliance_rate": 0.4,
+              "n_under": 4,
+              "n_over": 20
+            },
+            "pm5": {
+              "n_in_band": 27,
+              "compliance_rate": 0.675,
+              "n_under": 0,
+              "n_over": 13
+            },
+            "pm8": {
+              "n_in_band": 32,
+              "compliance_rate": 0.8,
+              "n_under": 0,
+              "n_over": 8
+            }
+          }
+        },
+        "structured": {
+          "n_messages": 40,
+          "n_empty": 0,
+          "first_attempt_compliant": 15,
+          "median_ratio": 0.5065,
+          "band": {
+            "pm2": {
+              "n_in_band": 26,
+              "compliance_rate": 0.65,
+              "n_under": 4,
+              "n_over": 10
+            },
+            "pm5": {
+              "n_in_band": 37,
+              "compliance_rate": 0.925,
+              "n_under": 0,
+              "n_over": 3
+            },
+            "pm8": {
+              "n_in_band": 40,
+              "compliance_rate": 1.0,
+              "n_under": 0,
+              "n_over": 0
+            }
+          }
+        }
+      },
+      "per_model": {
+        "deepseek-v4-flash-0731": {
+          "n": 20,
+          "compliant": 13,
+          "rate": 0.65
+        },
+        "deepseek-v4-pro-0813": {
+          "n": 20,
+          "compliant": 5,
+          "rate": 0.25
+        },
+        "qwen3.7-max": {
+          "n": 20,
+          "compliant": 14,
+          "rate": 0.7
+        },
+        "qwen3.7-plus": {
+          "n": 20,
+          "compliant": 10,
+          "rate": 0.5
+        }
+      },
+      "accuracy_by_ratio_bin": {
+        "0.00-0.40": {
+          "abstractive": {
+            "n_questions": 0,
+            "accuracy": null
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        },
+        "0.40-0.44": {
+          "abstractive": {
+            "n_questions": 0,
+            "accuracy": null
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        },
+        "0.44-0.48": {
+          "abstractive": {
+            "n_questions": 184,
+            "accuracy": 0.7989130434782609
+          },
+          "structured": {
+            "n_questions": 184,
+            "accuracy": 0.7717391304347826
+          }
+        },
+        "0.48-0.52": {
+          "abstractive": {
+            "n_questions": 712,
+            "accuracy": 0.797752808988764
+          },
+          "structured": {
+            "n_questions": 1148,
+            "accuracy": 0.7787456445993032
+          }
+        },
+        "0.52-0.56": {
+          "abstractive": {
+            "n_questions": 404,
+            "accuracy": 0.7623762376237624
+          },
+          "structured": {
+            "n_questions": 364,
+            "accuracy": 0.7527472527472527
+          }
+        },
+        "0.56-0.60": {
+          "abstractive": {
+            "n_questions": 260,
+            "accuracy": 0.8115384615384615
+          },
+          "structured": {
+            "n_questions": 96,
+            "accuracy": 0.75
+          }
+        },
+        "0.60-0.70": {
+          "abstractive": {
+            "n_questions": 184,
+            "accuracy": 0.8260869565217391
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        },
+        "0.70-1.10": {
+          "abstractive": {
+            "n_questions": 48,
+            "accuracy": 0.75
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "compliant_subset_gap": {
+        "all": {
+          "abs_n": 1792,
+          "abs_accuracy": 0.7935267857142857,
+          "struct_n": 1792,
+          "struct_accuracy": 0.7712053571428571,
+          "method_gap": 0.022321428571428603
+        },
+        "compliant_only": {
+          "abs_n": 712,
+          "abs_accuracy": 0.797752808988764,
+          "struct_n": 1148,
+          "struct_accuracy": 0.7787456445993032,
+          "method_gap": 0.019007164389460818
+        }
+      },
+      "lpm": {
+        "beta": [
+          0.8322271568594997,
+          -0.01868834864821539,
+          0.1368299654986172,
+          -0.06334308578196217,
+          -0.05318646306151972,
+          -0.0710075410476311,
+          0.008928571428571678,
+          -0.0011160714285710159,
+          0.005580357142857424
+        ],
+        "se": [
+          0.018520753439383333,
+          0.01948068373894413,
+          0.2221737263634455,
+          0.026263876007162536,
+          0.02557585278916784,
+          0.03231084845029159,
+          0.006280023345430984,
+          0.007373482170624587,
+          0.006990592355930469
+        ],
+        "z": [
+          44.93484347617391,
+          -0.9593271416267197,
+          0.6158692467298419,
+          -2.411795036067319,
+          -2.0795577570749013,
+          -2.1976377734825556,
+          1.4217417575473885,
+          -0.1513628707230571,
+          0.7982667074161932
+        ],
+        "p": [
+          0.0,
+          0.3373939663075485,
+          0.5379808200907228,
+          0.015874202615094646,
+          0.037566115003776046,
+          0.027974929168750107,
+          0.15510123302112233,
+          0.8796894768298169,
+          0.42471573368234816
+        ],
+        "n": 3584,
+        "clusters": 80,
+        "names": [
+          "intercept",
+          "struct",
+          "ratio_c",
+          "sender:deepseek-v4-pro-0813",
+          "sender:qwen3.7-max",
+          "sender:qwen3.7-plus",
+          "receiver:deepseek-v4-pro-0813",
+          "receiver:qwen3.7-max",
+          "receiver:qwen3.7-plus"
+        ],
+        "method_effect": {
+          "coef": -0.01868834864821539,
+          "se": 0.01948068373894413,
+          "p": 0.3373939663075485,
+          "ci95": [
+            -0.05687048877654589,
+            0.019493791480115104
+          ]
+        },
+        "ratio_slope": {
+          "coef": 0.1368299654986172,
+          "se": 0.2221737263634455,
+          "p": 0.5379808200907228,
+          "ci95": [
+            -0.29863053817373597,
+            0.5722904691709704
+          ]
+        }
+      }
+    },
+    "main_base": {
+      "label": "MAIN base density, 100 docs, self + 30-doc 4x4",
+      "messages": "results/main_v3/messages_base.jsonl",
+      "predictions": "results/main_v3/predictions_base.jsonl",
+      "n_messages": 800,
+      "n_questions": 8800,
+      "compliance": {
+        "abstractive": {
+          "n_messages": 400,
+          "n_empty": 0,
+          "first_attempt_compliant": 75,
+          "median_ratio": 0.5146999999999999,
+          "band": {
+            "pm2": {
+              "n_in_band": 167,
+              "compliance_rate": 0.4175,
+              "n_under": 55,
+              "n_over": 178
+            },
+            "pm5": {
+              "n_in_band": 270,
+              "compliance_rate": 0.675,
+              "n_under": 13,
+              "n_over": 117
+            },
+            "pm8": {
+              "n_in_band": 326,
+              "compliance_rate": 0.815,
+              "n_under": 5,
+              "n_over": 69
+            }
+          }
+        },
+        "structured": {
+          "n_messages": 400,
+          "n_empty": 0,
+          "first_attempt_compliant": 117,
+          "median_ratio": 0.50735,
+          "band": {
+            "pm2": {
+              "n_in_band": 208,
+              "compliance_rate": 0.52,
+              "n_under": 64,
+              "n_over": 128
+            },
+            "pm5": {
+              "n_in_band": 317,
+              "compliance_rate": 0.7925,
+              "n_under": 19,
+              "n_over": 64
+            },
+            "pm8": {
+              "n_in_band": 374,
+              "compliance_rate": 0.935,
+              "n_under": 4,
+              "n_over": 22
+            }
+          }
+        }
+      },
+      "per_model": {
+        "deepseek-v4-flash-0731": {
+          "n": 200,
+          "compliant": 106,
+          "rate": 0.53
+        },
+        "deepseek-v4-pro-0813": {
+          "n": 200,
+          "compliant": 35,
+          "rate": 0.175
+        },
+        "qwen3.7-max": {
+          "n": 200,
+          "compliant": 143,
+          "rate": 0.715
+        },
+        "qwen3.7-plus": {
+          "n": 200,
+          "compliant": 91,
+          "rate": 0.455
+        }
+      },
+      "accuracy_by_ratio_bin": {
+        "0.00-0.40": {
+          "abstractive": {
+            "n_questions": 24,
+            "accuracy": 0.75
+          },
+          "structured": {
+            "n_questions": 10,
+            "accuracy": 0.8
+          }
+        },
+        "0.40-0.44": {
+          "abstractive": {
+            "n_questions": 64,
+            "accuracy": 0.859375
+          },
+          "structured": {
+            "n_questions": 109,
+            "accuracy": 0.7706422018348624
+          }
+        },
+        "0.44-0.48": {
+          "abstractive": {
+            "n_questions": 518,
+            "accuracy": 0.8127413127413128
+          },
+          "structured": {
+            "n_questions": 591,
+            "accuracy": 0.7377326565143824
+          }
+        },
+        "0.48-0.52": {
+          "abstractive": {
+            "n_questions": 1829,
+            "accuracy": 0.8102788408966648
+          },
+          "structured": {
+            "n_questions": 2278,
+            "accuracy": 0.7682177348551361
+          }
+        },
+        "0.52-0.56": {
+          "abstractive": {
+            "n_questions": 855,
+            "accuracy": 0.8128654970760234
+          },
+          "structured": {
+            "n_questions": 895,
+            "accuracy": 0.7497206703910615
+          }
+        },
+        "0.56-0.60": {
+          "abstractive": {
+            "n_questions": 596,
+            "accuracy": 0.7835570469798657
+          },
+          "structured": {
+            "n_questions": 396,
+            "accuracy": 0.76010101010101
+          }
+        },
+        "0.60-0.70": {
+          "abstractive": {
+            "n_questions": 440,
+            "accuracy": 0.8295454545454546
+          },
+          "structured": {
+            "n_questions": 121,
+            "accuracy": 0.7520661157024794
+          }
+        },
+        "0.70-1.10": {
+          "abstractive": {
+            "n_questions": 74,
+            "accuracy": 0.8918918918918919
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "compliant_subset_gap": {
+        "all": {
+          "abs_n": 4400,
+          "abs_accuracy": 0.8111363636363637,
+          "struct_n": 4400,
+          "struct_accuracy": 0.7593181818181818,
+          "method_gap": 0.051818181818181874
+        },
+        "compliant_only": {
+          "abs_n": 1839,
+          "abs_accuracy": 0.8107667210440457,
+          "struct_n": 2278,
+          "struct_accuracy": 0.7682177348551361,
+          "method_gap": 0.042548986188909566
+        }
+      },
+      "lpm": {
+        "beta": [
+          0.8528919129347976,
+          -0.04407244060949117,
+          0.4338218483619133,
+          -0.04782539517325851,
+          -0.022284762712361187,
+          -0.03858583710432886,
+          -0.047825395173227515,
+          -0.022284762712361284,
+          -0.038585837104320404
+        ],
+        "se": [
+          0.008373391384685165,
+          0.00841363958473474,
+          0.09427285279907105,
+          0.0065930415254803485,
+          0.005535724384184168,
+          0.005934188727698366,
+          0.0065930415254797795,
+          0.005535724384184165,
+          0.005934188727698366
+        ],
+        "z": [
+          101.85740445558618,
+          -5.238213518137128,
+          4.601768541857345,
+          -7.253919907591375,
+          -4.025627210781995,
+          -6.502293552651259,
+          -7.2539199075873,
+          -4.025627210782014,
+          -6.502293552649833
+        ],
+        "p": [
+          0.0,
+          1.6213841624868053e-07,
+          4.189185888625602e-06,
+          4.050093593832571e-13,
+          5.682365080206253e-05,
+          7.910450072756703e-11,
+          4.050093593832571e-13,
+          5.682365080206253e-05,
+          7.910450072756703e-11
+        ],
+        "n": 8800,
+        "clusters": 800,
+        "names": [
+          "intercept",
+          "struct",
+          "ratio_c",
+          "sender:deepseek-v4-pro-0813",
+          "sender:qwen3.7-max",
+          "sender:qwen3.7-plus",
+          "receiver:deepseek-v4-pro-0813",
+          "receiver:qwen3.7-max",
+          "receiver:qwen3.7-plus"
+        ],
+        "method_effect": {
+          "coef": -0.04407244060949117,
+          "se": 0.00841363958473474,
+          "p": 1.6213841624868053e-07,
+          "ci95": [
+            -0.060563174195571265,
+            -0.02758170702341108
+          ]
+        },
+        "ratio_slope": {
+          "coef": 0.4338218483619133,
+          "se": 0.09427285279907105,
+          "p": 4.189185888625602e-06,
+          "ci95": [
+            0.24904705687573403,
+            0.6185966398480925
+          ]
+        }
+      }
+    },
+    "main_b100": {
+      "label": "MAIN b100 density, 100 docs, self + 30-doc 4x4",
+      "messages": "results/main_v3/messages_b100.jsonl",
+      "predictions": "results/main_v3/predictions_b100.jsonl",
+      "n_messages": 800,
+      "n_questions": 8800,
+      "compliance": {
+        "abstractive": {
+          "n_messages": 400,
+          "n_empty": 0,
+          "first_attempt_compliant": 100,
+          "median_ratio": 0.5132,
+          "band": {
+            "pm2": {
+              "n_in_band": 191,
+              "compliance_rate": 0.4775,
+              "n_under": 41,
+              "n_over": 168
+            },
+            "pm5": {
+              "n_in_band": 299,
+              "compliance_rate": 0.7475,
+              "n_under": 9,
+              "n_over": 92
+            },
+            "pm8": {
+              "n_in_band": 348,
+              "compliance_rate": 0.87,
+              "n_under": 0,
+              "n_over": 52
+            }
+          }
+        },
+        "structured": {
+          "n_messages": 400,
+          "n_empty": 0,
+          "first_attempt_compliant": 116,
+          "median_ratio": 0.5045,
+          "band": {
+            "pm2": {
+              "n_in_band": 227,
+              "compliance_rate": 0.5675,
+              "n_under": 65,
+              "n_over": 108
+            },
+            "pm5": {
+              "n_in_band": 332,
+              "compliance_rate": 0.83,
+              "n_under": 20,
+              "n_over": 48
+            },
+            "pm8": {
+              "n_in_band": 379,
+              "compliance_rate": 0.9475,
+              "n_under": 5,
+              "n_over": 16
+            }
+          }
+        }
+      },
+      "per_model": {
+        "deepseek-v4-flash-0731": {
+          "n": 200,
+          "compliant": 120,
+          "rate": 0.6
+        },
+        "deepseek-v4-pro-0813": {
+          "n": 200,
+          "compliant": 60,
+          "rate": 0.3
+        },
+        "qwen3.7-max": {
+          "n": 200,
+          "compliant": 136,
+          "rate": 0.68
+        },
+        "qwen3.7-plus": {
+          "n": 200,
+          "compliant": 102,
+          "rate": 0.51
+        }
+      },
+      "accuracy_by_ratio_bin": {
+        "0.00-0.40": {
+          "abstractive": {
+            "n_questions": 0,
+            "accuracy": null
+          },
+          "structured": {
+            "n_questions": 31,
+            "accuracy": 0.2903225806451613
+          }
+        },
+        "0.40-0.44": {
+          "abstractive": {
+            "n_questions": 23,
+            "accuracy": 0.7391304347826086
+          },
+          "structured": {
+            "n_questions": 112,
+            "accuracy": 0.5892857142857143
+          }
+        },
+        "0.44-0.48": {
+          "abstractive": {
+            "n_questions": 451,
+            "accuracy": 0.7649667405764967
+          },
+          "structured": {
+            "n_questions": 576,
+            "accuracy": 0.6631944444444444
+          }
+        },
+        "0.48-0.52": {
+          "abstractive": {
+            "n_questions": 2105,
+            "accuracy": 0.8014251781472684
+          },
+          "structured": {
+            "n_questions": 2491,
+            "accuracy": 0.7065435568044962
+          }
+        },
+        "0.52-0.56": {
+          "abstractive": {
+            "n_questions": 1067,
+            "accuracy": 0.8059981255857545
+          },
+          "structured": {
+            "n_questions": 803,
+            "accuracy": 0.7210460772104608
+          }
+        },
+        "0.56-0.60": {
+          "abstractive": {
+            "n_questions": 464,
+            "accuracy": 0.7952586206896551
+          },
+          "structured": {
+            "n_questions": 325,
+            "accuracy": 0.796923076923077
+          }
+        },
+        "0.60-0.70": {
+          "abstractive": {
+            "n_questions": 259,
+            "accuracy": 0.7606177606177607
+          },
+          "structured": {
+            "n_questions": 62,
+            "accuracy": 0.8225806451612904
+          }
+        },
+        "0.70-1.10": {
+          "abstractive": {
+            "n_questions": 31,
+            "accuracy": 0.9032258064516129
+          },
+          "structured": {
+            "n_questions": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "compliant_subset_gap": {
+        "all": {
+          "abs_n": 4400,
+          "abs_accuracy": 0.7961363636363636,
+          "struct_n": 4400,
+          "struct_accuracy": 0.7059090909090909,
+          "method_gap": 0.09022727272727271
+        },
+        "compliant_only": {
+          "abs_n": 2113,
+          "abs_accuracy": 0.8026502602934217,
+          "struct_n": 2503,
+          "struct_accuracy": 0.7071514182980424,
+          "method_gap": 0.09549884199537928
+        }
+      },
+      "lpm": {
+        "beta": [
+          0.8443792509916217,
+          -0.08073542532635353,
+          0.557591812168333,
+          -0.0422795124417005,
+          -0.02300323080618855,
+          -0.057554237568794325,
+          -0.042279512441738124,
+          -0.02300323080618636,
+          -0.05755423756879356
+        ],
+        "se": [
+          0.008890412238325485,
+          0.008779553562953693,
+          0.12213833506338923,
+          0.006392367247368743,
+          0.005501580548027747,
+          0.006254253188654551,
+          0.0063923672473693936,
+          0.00550158054802778,
+          0.006254253188654551
+        ],
+        "z": [
+          94.97638898583415,
+          -9.195846320367094,
+          4.565248182554195,
+          -6.614061865595065,
+          -4.181204038616674,
+          -9.20241567341723,
+          -6.614061865600278,
+          -4.181204038616251,
+          -9.202415673417107
+        ],
+        "p": [
+          0.0,
+          0.0,
+          4.9890375166672385e-06,
+          3.739142329095557e-11,
+          2.899695078717457e-05,
+          0.0,
+          3.739142329095557e-11,
+          2.899695078717457e-05,
+          0.0
+        ],
+        "n": 8800,
+        "clusters": 800,
+        "names": [
+          "intercept",
+          "struct",
+          "ratio_c",
+          "sender:deepseek-v4-pro-0813",
+          "sender:qwen3.7-max",
+          "sender:qwen3.7-plus",
+          "receiver:deepseek-v4-pro-0813",
+          "receiver:qwen3.7-max",
+          "receiver:qwen3.7-plus"
+        ],
+        "method_effect": {
+          "coef": -0.08073542532635353,
+          "se": 0.008779553562953693,
+          "p": 0.0,
+          "ci95": [
+            -0.09794335030974277,
+            -0.06352750034296428
+          ]
+        },
+        "ratio_slope": {
+          "coef": 0.557591812168333,
+          "se": 0.12213833506338923,
+          "p": 4.9890375166672385e-06,
+          "ci95": [
+            0.31820067544409014,
+            0.7969829488925758
+          ]
+        }
+      }
+    }
+  }
+}

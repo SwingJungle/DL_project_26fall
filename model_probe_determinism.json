@@ -1,0 +1,52 @@
+{
+  "qwen3.7-plus": {
+    "temp0_identical": true,
+    "hashes": [
+      "e649e481",
+      "e649e481",
+      "e649e481"
+    ],
+    "temp12_hash": "e649e481",
+    "temp12_differs": false
+  },
+  "qwen3.7-max": {
+    "temp0_identical": true,
+    "hashes": [
+      "9a7a2e26",
+      "9a7a2e26",
+      "9a7a2e26"
+    ],
+    "temp12_hash": "e649e481",
+    "temp12_differs": true
+  },
+  "qwen3.8-flash": {
+    "temp0_identical": true,
+    "hashes": [
+      "7b45e910",
+      "7b45e910",
+      "7b45e910"
+    ],
+    "temp12_hash": "02e8b477",
+    "temp12_differs": true
+  },
+  "deepseek-v4-flash-0731": {
+    "temp0_identical": false,
+    "hashes": [
+      "e649e481",
+      "87e79054",
+      "87e79054"
+    ],
+    "temp12_hash": "e649e481",
+    "temp12_differs": false
+  },
+  "deepseek-v4-pro-0813": {
+    "temp0_identical": true,
+    "hashes": [
+      "e649e481",
+      "e649e481",
+      "e649e481"
+    ],
+    "temp12_hash": "e649e481",
+    "temp12_differs": false
+  }
+}

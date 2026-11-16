@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-11-16T20:24:19+08:00",
+  "measured": {
+    "total": {
+      "calls": 6803,
+      "fresh": 5672,
+      "prompt": 4221730,
+      "completion": 1111829,
+      "cached": 556928
+    },
+    "by_type": {
+      "receiver": {
+        "calls": 2476,
+        "prompt": 1497353,
+        "completion": 583808,
+        "cached": 1792,
+        "prompt_per_call": 604.7467689822294,
+        "completion_per_call": 235.78675282714056,
+        "cache_rate": 0.0011967785819375926
+      },
+      "full": {
+        "calls": 490,
+        "prompt": 321417,
+        "completion": 118860,
+        "cached": 10752,
+        "prompt_per_call": 655.9530612244898,
+        "completion_per_call": 242.57142857142858,
+        "cache_rate": 0.03345187093402029
+      },
+      "sender": {
+        "calls": 2693,
+        "prompt": 2400395,
+        "completion": 407518,
+        "cached": 544384,
+        "prompt_per_call": 891.346082435945,
+        "completion_per_call": 151.3249164500557,
+        "cache_rate": 0.22678934092097341
+      },
+      "other": {
+        "calls": 13,
+        "prompt": 2565,
+        "completion": 1643,
+        "cached": 0,
+        "prompt_per_call": 197.30769230769232,
+        "completion_per_call": 126.38461538461539,
+        "cache_rate": 0.0
+      }
+    },
+    "by_model": {
+      "deepseek-v4-pro-0813": {
+        "calls": 1319,
+        "prompt": 946154,
+        "completion": 237032,
+        "cached": 264192,
+        "cache_rate": 0.2792272716703623
+      },
+      "deepseek-v4-flash-0731": {
+        "calls": 1297,
+        "prompt": 920689,
+        "completion": 225863,
+        "cached": 250624,
+        "cache_rate": 0.27221352704333385
+      },
+      "qwen3.7-max": {
+        "calls": 1702,
+        "prompt": 1323768,
+        "completion": 296486,
+        "cached": 1152,
+        "cache_rate": 0.0008702431241728157
+      },
+      "qwen3.7-plus": {
+        "calls": 1354,
+        "prompt": 1031119,
+        "completion": 352448,
+        "cached": 40960,
+        "cache_rate": 0.03972383400945963
+      }
+    }
+  },
+  "reconciliation": {
+    "date": "2026-11-15",
+    "rows": {
+      "deepseek-v4-flash-0731": {
+        "dashboard_total": 22249348,
+        "logged_total": 1146552,
+        "ratio": 19.405441706961394,
+        "extra_tokens": 21102796,
+        "dashboard_cache_rate": 0.142,
+        "logged_cache_rate": 0.27221352704333385,
+        "extra_input": 20132483,
+        "extra_output": 970313
+      },
+      "deepseek-v4-pro-0813": {
+        "dashboard_total": 1196622,
+        "logged_total": 1183186,
+        "ratio": 1.0113557800717723,
+        "extra_tokens": 13436,
+        "dashboard_cache_rate": 0.282,
+        "logged_cache_rate": 0.2792272716703623,
+        "extra_input": 11700,
+        "extra_output": 1736
+      },
+      "qwen3.7-max": {
+        "dashboard_total": 1625878,
+        "logged_total": 1620254,
+        "ratio": 1.0034710607102344,
+        "extra_tokens": 5624,
+        "dashboard_cache_rate": 0.001,
+        "logged_cache_rate": 0.0008702431241728157,
+        "extra_input": 4618,
+        "extra_output": 1006
+      },
+      "qwen3.7-plus": {
+        "dashboard_total": 1389590,
+        "logged_total": 1383567,
+        "ratio": 1.0043532405730984,
+        "extra_tokens": 6023,
+        "dashboard_cache_rate": 0.04,
+        "logged_cache_rate": 0.03972383400945963,
+        "extra_input": 5008,
+        "extra_output": 1015
+      }
+    },
+    "total_dashboard": 26461438,
+    "total_logged": 5333559,
+    "total_extra": 21127879
+  },
+  "assumptions": {
+    "sender_calls_per_message": {
+      "0": 1.0,
+      "1": 1.4,
+      "2": 1.8
+    },
+    "note": "measured mean tokens/call; forecasting only"
+  },
+  "forecast": {
+    "A_current": {
+      "label": "100 docs, 4 receivers, retries=2",
+      "docs": 100,
+      "densities": 2,
+      "methods": 2,
+      "senders": 4,
+      "receivers": 4,
+      "subset_docs_4x4": null,
+      "retries": 2,
+      "compact_docs": 0,
+      "n_messages": 1600,
+      "sender_calls": 2880,
+      "receiver_calls": 6400,
+      "full_calls": 400,
+      "compact_calls": 0,
+      "total_calls": 9680,
+      "total_tokens": 8741717
+    },
+    "B_lean": {
+      "label": "100 docs, self + 4x4 on 30 docs, retries=1",
+      "docs": 100,
+      "densities": 2,
+      "methods": 2,
+      "senders": 4,
+      "receivers": 1,
+      "subset_docs_4x4": 30,
+      "retries": 1,
+      "compact_docs": 0,
+      "n_messages": 1600,
+      "sender_calls": 2240,
+      "receiver_calls": 3040,
+      "full_calls": 400,
+      "compact_calls": 0,
+      "total_calls": 5680,
+      "total_tokens": 5250215
+    },
+    "C_lean_compact": {
+      "label": "B + compact b100 self-only",
+      "docs": 100,
+      "densities": 2,
+      "methods": 2,
+      "senders": 4,
+      "receivers": 1,
+      "subset_docs_4x4": 30,
+      "retries": 1,
+      "compact_docs": 100,
+      "n_messages": 1600,
+      "sender_calls": 2800,
+      "receiver_calls": 3440,
+      "full_calls": 400,
+      "compact_calls": 960,
+      "total_calls": 6640,
+      "total_tokens": 6170324
+    },
+    "D_self_only": {
+      "label": "100 docs, self only, retries=0 (no 4x4)",
+      "docs": 100,
+      "densities": 2,
+      "methods": 2,
+      "senders": 4,
+      "receivers": 1,
+      "subset_docs_4x4": null,
+      "retries": 0,
+      "compact_docs": 0,
+      "n_messages": 1600,
+      "sender_calls": 1600,
+      "receiver_calls": 1600,
+      "full_calls": 400,
+      "compact_calls": 0,
+      "total_calls": 3600,
+      "total_tokens": 3372537
+    }
+  }
+}

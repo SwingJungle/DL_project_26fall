@@ -1,0 +1,384 @@
+{
+  "scopes": {
+    "all_receivers": {
+      "cells": {
+        "base|abstractive": {
+          "n_correct": 1422,
+          "n_questions": 1792,
+          "accuracy": 0.7935267857142857
+        },
+        "base|structured": {
+          "n_correct": 1382,
+          "n_questions": 1792,
+          "accuracy": 0.7712053571428571
+        },
+        "b100|abstractive": {
+          "n_correct": 1436,
+          "n_questions": 1792,
+          "accuracy": 0.8013392857142857
+        },
+        "b100|structured": {
+          "n_correct": 1244,
+          "n_questions": 1792,
+          "accuracy": 0.6941964285714286
+        }
+      },
+      "method_gap": {
+        "base": 0.022321428571428603,
+        "b100": 0.1071428571428571,
+        "interaction": 0.08482142857142849
+      },
+      "density_effect": {
+        "abstractive": {
+          "n_pairs": 1792,
+          "both_correct": 1271,
+          "both_wrong": 205,
+          "a_only_correct": 151,
+          "b_only_correct": 165,
+          "accuracy_a": 0.7935267857142857,
+          "accuracy_b": 0.8013392857142857,
+          "diff_a_minus_b": -0.0078125,
+          "mcnemar_p": 0.4646469003646025,
+          "bootstrap_ci": [
+            -0.03982300884955752,
+            0.025
+          ]
+        },
+        "structured": {
+          "n_pairs": 1792,
+          "both_correct": 1103,
+          "both_wrong": 269,
+          "a_only_correct": 279,
+          "b_only_correct": 141,
+          "accuracy_a": 0.7712053571428571,
+          "accuracy_b": 0.6941964285714286,
+          "diff_a_minus_b": 0.07700892857142849,
+          "mcnemar_p": 1.5280088061371234e-11,
+          "bootstrap_ci": [
+            0.03179824561403509,
+            0.11830357142857142
+          ]
+        }
+      },
+      "interaction": {
+        "diff": 0.08482142857142849,
+        "bootstrap_ci": [
+          0.04945652173913051,
+          0.1244419642857143
+        ]
+      }
+    },
+    "self_only": {
+      "cells": {
+        "base|abstractive": {
+          "n_correct": 353,
+          "n_questions": 448,
+          "accuracy": 0.7879464285714286
+        },
+        "base|structured": {
+          "n_correct": 344,
+          "n_questions": 448,
+          "accuracy": 0.7678571428571429
+        },
+        "b100|abstractive": {
+          "n_correct": 361,
+          "n_questions": 448,
+          "accuracy": 0.8058035714285714
+        },
+        "b100|structured": {
+          "n_correct": 307,
+          "n_questions": 448,
+          "accuracy": 0.6852678571428571
+        }
+      },
+      "method_gap": {
+        "base": 0.0200892857142857,
+        "b100": 0.1205357142857143,
+        "interaction": 0.1004464285714286
+      },
+      "density_effect": {
+        "abstractive": {
+          "n_pairs": 448,
+          "both_correct": 317,
+          "both_wrong": 51,
+          "a_only_correct": 36,
+          "b_only_correct": 44,
+          "accuracy_a": 0.7879464285714286,
+          "accuracy_b": 0.8058035714285714,
+          "diff_a_minus_b": -0.017857142857142794,
+          "mcnemar_p": 0.4340422553454787,
+          "bootstrap_ci": [
+            -0.0625,
+            0.027777777777777776
+          ]
+        },
+        "structured": {
+          "n_pairs": 448,
+          "both_correct": 271,
+          "both_wrong": 68,
+          "a_only_correct": 73,
+          "b_only_correct": 36,
+          "accuracy_a": 0.7678571428571429,
+          "accuracy_b": 0.6852678571428571,
+          "diff_a_minus_b": 0.08258928571428581,
+          "mcnemar_p": 0.0005050343915302426,
+          "bootstrap_ci": [
+            0.03728070175438596,
+            0.12727272727272726
+          ]
+        }
+      },
+      "interaction": {
+        "diff": 0.1004464285714286,
+        "bootstrap_ci": [
+          0.07045454545454544,
+          0.12962962962962954
+        ]
+      }
+    }
+  },
+  "per_model": {
+    "all_receivers": {
+      "base": {
+        "deepseek-v4-flash-0731": {
+          "abstractive": {
+            "accuracy": 0.8571428571428571,
+            "n": 448
+          },
+          "structured": {
+            "accuracy": 0.796875,
+            "n": 448
+          },
+          "gap": 0.060267857142857095
+        },
+        "deepseek-v4-pro-0813": {
+          "abstractive": {
+            "accuracy": 0.7767857142857143,
+            "n": 448
+          },
+          "structured": {
+            "accuracy": 0.765625,
+            "n": 448
+          },
+          "gap": 0.011160714285714302
+        },
+        "qwen3.7-max": {
+          "abstractive": {
+            "accuracy": 0.7767857142857143,
+            "n": 448
+          },
+          "structured": {
+            "accuracy": 0.7678571428571429,
+            "n": 448
+          },
+          "gap": 0.008928571428571397
+        },
+        "qwen3.7-plus": {
+          "abstractive": {
+            "accuracy": 0.7633928571428571,
+            "n": 448
+          },
+          "structured": {
+            "accuracy": 0.7544642857142857,
+            "n": 448
+          },
+          "gap": 0.008928571428571397
+        }
+      },
+      "b100": {
+        "deepseek-v4-flash-0731": {
+          "abstractive": {
+            "accuracy": 0.875,
+            "n": 448
+          },
+          "structured": {
+            "accuracy": 0.7700892857142857,
+            "n": 448
+          },
+          "gap": 0.1049107142857143
+        },
+        "deepseek-v4-pro-0813": {
+          "abstractive": {
+            "accuracy": 0.8214285714285714,
+            "n": 448
+          },
+          "structured": {
+            "accuracy": 0.7165178571428571,
+            "n": 448
+          },
+          "gap": 0.1049107142857143
+        },
+        "qwen3.7-max": {
+          "abstractive": {
+            "accuracy": 0.7700892857142857,
+            "n": 448
+          },
+          "structured": {
+            "accuracy": 0.6919642857142857,
+            "n": 448
+          },
+          "gap": 0.078125
+        },
+        "qwen3.7-plus": {
+          "abstractive": {
+            "accuracy": 0.7388392857142857,
+            "n": 448
+          },
+          "structured": {
+            "accuracy": 0.5982142857142857,
+            "n": 448
+          },
+          "gap": 0.140625
+        }
+      }
+    },
+    "self_only": {
+      "base": {
+        "deepseek-v4-flash-0731": {
+          "abstractive": {
+            "accuracy": 0.8571428571428571,
+            "n": 112
+          },
+          "structured": {
+            "accuracy": 0.7857142857142857,
+            "n": 112
+          },
+          "gap": 0.0714285714285714
+        },
+        "deepseek-v4-pro-0813": {
+          "abstractive": {
+            "accuracy": 0.7678571428571429,
+            "n": 112
+          },
+          "structured": {
+            "accuracy": 0.7678571428571429,
+            "n": 112
+          },
+          "gap": 0.0
+        },
+        "qwen3.7-max": {
+          "abstractive": {
+            "accuracy": 0.7767857142857143,
+            "n": 112
+          },
+          "structured": {
+            "accuracy": 0.7767857142857143,
+            "n": 112
+          },
+          "gap": 0.0
+        },
+        "qwen3.7-plus": {
+          "abstractive": {
+            "accuracy": 0.75,
+            "n": 112
+          },
+          "structured": {
+            "accuracy": 0.7410714285714286,
+            "n": 112
+          },
+          "gap": 0.008928571428571397
+        }
+      },
+      "b100": {
+        "deepseek-v4-flash-0731": {
+          "abstractive": {
+            "accuracy": 0.8839285714285714,
+            "n": 112
+          },
+          "structured": {
+            "accuracy": 0.7589285714285714,
+            "n": 112
+          },
+          "gap": 0.125
+        },
+        "deepseek-v4-pro-0813": {
+          "abstractive": {
+            "accuracy": 0.8214285714285714,
+            "n": 112
+          },
+          "structured": {
+            "accuracy": 0.7053571428571429,
+            "n": 112
+          },
+          "gap": 0.11607142857142849
+        },
+        "qwen3.7-max": {
+          "abstractive": {
+            "accuracy": 0.7678571428571429,
+            "n": 112
+          },
+          "structured": {
+            "accuracy": 0.6875,
+            "n": 112
+          },
+          "gap": 0.0803571428571429
+        },
+        "qwen3.7-plus": {
+          "abstractive": {
+            "accuracy": 0.75,
+            "n": 112
+          },
+          "structured": {
+            "accuracy": 0.5892857142857143,
+            "n": 112
+          },
+          "gap": 0.1607142857142857
+        }
+      }
+    }
+  },
+  "retention": {
+    "base": {
+      "abstractive": {
+        "n_messages": 40,
+        "compliant": 16,
+        "compliance_rate": 0.4,
+        "mean_fact_retention": 0.8220225000000001,
+        "mean_bytes": 633.725,
+        "mean_ratio_source": 0.5350175,
+        "mean_n_items": 0.0
+      },
+      "structured": {
+        "n_messages": 40,
+        "compliant": 26,
+        "compliance_rate": 0.65,
+        "mean_fact_retention": 0.739035,
+        "mean_bytes": 602.275,
+        "mean_ratio_source": 0.5083025,
+        "mean_n_items": 7.0
+      }
+    },
+    "b100": {
+      "abstractive": {
+        "n_messages": 40,
+        "compliant": 20,
+        "compliance_rate": 0.5,
+        "mean_fact_retention": 0.8022275000000001,
+        "mean_bytes": 466.475,
+        "mean_ratio_source": 0.51866,
+        "mean_n_items": 0.0
+      },
+      "structured": {
+        "n_messages": 40,
+        "compliant": 24,
+        "compliance_rate": 0.6,
+        "mean_fact_retention": 0.6561874999999999,
+        "mean_bytes": 455.875,
+        "mean_ratio_source": 0.5079625,
+        "mean_n_items": 7.0
+      }
+    }
+  },
+  "baseline_full": {
+    "base": {
+      "n_correct": 426,
+      "n_questions": 448,
+      "accuracy": 0.9508928571428571
+    },
+    "b100": {
+      "n_correct": 429,
+      "n_questions": 448,
+      "accuracy": 0.9575892857142857
+    }
+  }
+}

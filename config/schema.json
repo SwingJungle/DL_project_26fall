@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CompressedMessage",
+  "description": "Structured compressed message (D-4): 1-char keys, fixed key order, compact serialization. Every byte of this JSON counts toward the budget.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "v",
+    "f"
+  ],
+  "properties": {
+    "v": {
+      "const": 1,
+      "description": "schema version"
+    },
+    "f": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "description": "atomic facts, most important first",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "k",
+          "x"
+        ],
+        "properties": {
+          "k": {
+            "type": "string",
+            "enum": [
+              "E",
+              "D",
+              "R",
+              "N",
+              "C",
+              "T",
+              "U",
+              "S"
+            ],
+            "description": "E entity; D number/date; R positive relation; N negation; C condition/exception; T temporal order; U attribution/uncertainty; S causal"
+          },
+          "x": {
+            "type": "string",
+            "minLength": 3,
+            "description": "one short, complete, self-contained statement"
+          }
+        }
+      }
+    }
+  }
+}

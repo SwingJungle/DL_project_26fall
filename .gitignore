@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------------------
+# Experiment code + data repository. Only material needed to reproduce the
+# experiments is tracked; documents, figures and runtime state are not.
+# ---------------------------------------------------------------------------
+
+# credentials — never commit
+Qwen.txt
+.env
+*.pem
+*.key
+
+# documents and images (report lives outside this repository)
+*.md
+*.pdf
+*.docx
+*.pages
+*.xlsx
+*.txt
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.webp
+docs/
+reports/figures/
+
+# document tooling (edits the Word/PDF deliverables, not the experiment)
+add_member*.py
+build_execution_tracker.py
+
+# runtime state and caches
+runs/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# superseded / archived corpora
+data/_superseded_v1/
+data/docs.jsonl
+data/questions.jsonl

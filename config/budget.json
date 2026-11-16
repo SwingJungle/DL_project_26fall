@@ -1,0 +1,18 @@
+{
+  "_note": "experiment_ratio 是标题数字，不得事后修改。tolerance_abs 是绝对百分点：48%-52% 源字节。",
+  "experiment_ratio": 0.5,
+  "tolerance_abs": 0.02,
+  "max_retries": 2,
+  "cap": {
+    "max_calls_per_run": 12000,
+    "max_prompt_tokens_per_run": 40000000,
+    "max_completion_tokens_per_run": 12000000,
+    "max_cost_usd_per_run": null
+  },
+  "rate_limit": {
+    "min_interval_s": 0.0,
+    "max_attempts": 3,
+    "backoff_base_s": 1.5,
+    "backoff_max_s": 60.0
+  }
+}

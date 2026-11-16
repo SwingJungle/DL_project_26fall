@@ -1,0 +1,623 @@
+{
+  "spec": {
+    "base": {
+      "predictions": "results/main_v3/predictions_base.jsonl",
+      "predictions_cross": "results/main_v3/predictions_base_cross.jsonl",
+      "data_dir": "data/_v3_paired/base"
+    },
+    "b100": {
+      "predictions": "results/main_v3/predictions_b100.jsonl",
+      "predictions_cross": "results/main_v3/predictions_b100_cross.jsonl",
+      "data_dir": "data/_v3_paired/b100"
+    }
+  },
+  "n_rows": 33248,
+  "n_docs": 100,
+  "n_senders": 4,
+  "n_receivers": 4,
+  "cells_all": {
+    "base|abstractive": {
+      "n_correct": 6776,
+      "n_questions": 8312,
+      "accuracy": 0.8152069297401348
+    },
+    "base|structured": {
+      "n_correct": 6333,
+      "n_questions": 8312,
+      "accuracy": 0.7619104908565929
+    },
+    "base|gap": {
+      "gap": 0.05329643888354185
+    },
+    "b100|abstractive": {
+      "n_correct": 6639,
+      "n_questions": 8312,
+      "accuracy": 0.7987247353224254
+    },
+    "b100|structured": {
+      "n_correct": 5870,
+      "n_questions": 8312,
+      "accuracy": 0.7062078922040423
+    },
+    "b100|gap": {
+      "gap": 0.09251684311838304
+    },
+    "interaction": {
+      "interaction": 0.03922040423484119
+    }
+  },
+  "cells_all_ci": {
+    "base|abstractive": {
+      "point": 0.8152069297401348,
+      "ci_lo": 0.795822102425876,
+      "ci_hi": 0.8340718857705564
+    },
+    "base|structured": {
+      "point": 0.7619104908565929,
+      "ci_lo": 0.741822429906542,
+      "ci_hi": 0.7816525988449577
+    },
+    "b100|abstractive": {
+      "point": 0.7987247353224254,
+      "ci_lo": 0.7810424118548799,
+      "ci_hi": 0.81657223796034
+    },
+    "b100|structured": {
+      "point": 0.7062078922040423,
+      "ci_lo": 0.6896881838074398,
+      "ci_hi": 0.7229146692233941
+    }
+  },
+  "cells_self": {
+    "base|abstractive": {
+      "n_correct": 3569,
+      "n_questions": 4400,
+      "accuracy": 0.8111363636363637
+    },
+    "base|structured": {
+      "n_correct": 3341,
+      "n_questions": 4400,
+      "accuracy": 0.7593181818181818
+    },
+    "base|gap": {
+      "gap": 0.051818181818181874
+    },
+    "b100|abstractive": {
+      "n_correct": 3503,
+      "n_questions": 4400,
+      "accuracy": 0.7961363636363636
+    },
+    "b100|structured": {
+      "n_correct": 3106,
+      "n_questions": 4400,
+      "accuracy": 0.7059090909090909
+    },
+    "b100|gap": {
+      "gap": 0.09022727272727271
+    },
+    "interaction": {
+      "interaction": 0.03840909090909084
+    }
+  },
+  "interaction_all": {
+    "point": 0.03922040423484119,
+    "ci_lo": 0.017650976909413852,
+    "ci_hi": 0.06282952548330403,
+    "n_pairs_abs": 8312,
+    "n_pairs_struct": 8312
+  },
+  "interaction_self": {
+    "point": 0.03840909090909091,
+    "ci_lo": 0.01900715563506261,
+    "ci_hi": 0.05901189387008234,
+    "n_pairs_abs": 4400,
+    "n_pairs_struct": 4400
+  },
+  "mcnemar": {
+    "abstractive": {
+      "n_pairs": 8312,
+      "both_correct": 5879,
+      "both_wrong": 776,
+      "a_only_correct": 897,
+      "b_only_correct": 760,
+      "accuracy_a": 0.8152069297401348,
+      "accuracy_b": 0.7987247353224254,
+      "diff_a_minus_b": 0.016482194417709373,
+      "mcnemar_p": 0.0008296134698178245
+    },
+    "structured": {
+      "n_pairs": 8312,
+      "both_correct": 5110,
+      "both_wrong": 1219,
+      "a_only_correct": 1223,
+      "b_only_correct": 760,
+      "accuracy_a": 0.7619104908565929,
+      "accuracy_b": 0.7062078922040423,
+      "diff_a_minus_b": 0.05570259865255056,
+      "mcnemar_p": 1.962608392481429e-25
+    }
+  },
+  "baseline_full": {
+    "base": {
+      "n_correct": 4262,
+      "n_questions": 4400,
+      "accuracy": 0.9686363636363636
+    },
+    "b100": {
+      "n_correct": 4259,
+      "n_questions": 4400,
+      "accuracy": 0.9679545454545454
+    }
+  },
+  "lpm": {
+    "model": "LPM (doc-clustered robust SE)",
+    "n": 33248,
+    "n_clusters": 100,
+    "coefs": {
+      "intercept": {
+        "coef": 0.8218665353122717,
+        "se": 0.010800625519156072,
+        "z": 76.09434600381275,
+        "p": 0.0
+      },
+      "struct": {
+        "coef": -0.046979139215010714,
+        "se": 0.00833182142627167,
+        "z": -5.638519695930758,
+        "p": 1.715182040840091e-08
+      },
+      "dense": {
+        "coef": -0.013594946368048484,
+        "se": 0.010150948885615,
+        "z": -1.3392783789221916,
+        "p": 0.18048006468230282
+      },
+      "struct_x_dense": {
+        "coef": -0.041097370270335574,
+        "se": 0.01184668460251677,
+        "z": -3.469103099242183,
+        "p": 0.0005221990177286528
+      },
+      "ratio_c": {
+        "coef": 0.3351942938108227,
+        "se": 0.10883185147951316,
+        "z": 3.079928249441945,
+        "p": 0.002070504682193386
+      },
+      "multihop": {
+        "coef": -0.07600356837244816,
+        "se": 0.02239459674688561,
+        "z": -3.3938350947541793,
+        "p": 0.0006892118088774879
+      },
+      "self": {
+        "coef": -0.005263831701121361,
+        "se": 0.009253864007812699,
+        "z": -0.568825270900599,
+        "p": 0.5694747231198765
+      }
+    },
+    "struct_extra_loss_pp": -4.109737027033558,
+    "h2_gap_interaction_pp": 4.109737027033558
+  },
+  "gee": {
+    "model": "GEE binomial (exchangeable, doc clusters)",
+    "n": 33248,
+    "n_clusters": 100,
+    "coefs": {
+      "intercept": {
+        "coef": 1.5361854080204578,
+        "se": 0.056200075638875815,
+        "z": 27.334223140401214,
+        "p": 1.6633158149227183e-164
+      },
+      "struct": {
+        "coef": -0.294165245852236,
+        "se": 0.04949393425832682,
+        "z": -5.943460552496812,
+        "p": 2.7906693245756688e-09
+      },
+      "dense": {
+        "coef": -0.09439960095181509,
+        "se": 0.06533159670346331,
+        "z": -1.4449302590948438,
+        "p": 0.1484774759179766
+      },
+      "struct_x_dense": {
+        "coef": -0.18897369001976344,
+        "se": 0.06812062516648816,
+        "z": -2.7741038717408713,
+        "p": 0.005535400112895264
+      },
+      "ratio_c": {
+        "coef": 1.7165176357999794,
+        "se": 0.6495514345734303,
+        "z": 2.642620036590699,
+        "p": 0.008226729857731405
+      },
+      "multihop": {
+        "coef": -0.42305427847083893,
+        "se": 0.111435308421503,
+        "z": -3.79641142886813,
+        "p": 0.00014680577974605265
+      },
+      "self": {
+        "coef": -0.013813251611288995,
+        "se": 0.020028125776671183,
+        "z": -0.6896926734591766,
+        "p": 0.49038747422556606
+      }
+    },
+    "marginal_cells": {
+      "base|abstractive": 0.8132553321358869,
+      "base|structured": 0.7647544038503814,
+      "b100|abstractive": 0.798580812148441,
+      "b100|structured": 0.7104373279420694
+    },
+    "h2_gap_interaction_pp": 3.9642555920866185,
+    "struct_extra_loss_pp": -3.9642555920866185
+  },
+  "d11_sensitivity": {
+    "n_flagged": 16,
+    "flagged": {
+      "base": [
+        "p-0019-q8",
+        "p-0059-q12",
+        "p-0105-q3",
+        "p-0162-q9"
+      ],
+      "b100": [
+        "p-0009-q10",
+        "p-0020-q4",
+        "p-0025-q1",
+        "p-0055-q1",
+        "p-0067-q4",
+        "p-0085-q6",
+        "p-0101-q10",
+        "p-0110-q8",
+        "p-0117-q5",
+        "p-0159-q6",
+        "p-0176-q6",
+        "p-0187-q4"
+      ]
+    },
+    "n_rows_after": 33152,
+    "table": {
+      "base|abstractive": {
+        "n_correct": 6770,
+        "n_questions": 8304,
+        "accuracy": 0.8152697495183044
+      },
+      "base|structured": {
+        "n_correct": 6328,
+        "n_questions": 8304,
+        "accuracy": 0.7620423892100193
+      },
+      "base|gap": {
+        "gap": 0.05322736030828512
+      },
+      "b100|abstractive": {
+        "n_correct": 6619,
+        "n_questions": 8272,
+        "accuracy": 0.8001692456479691
+      },
+      "b100|structured": {
+        "n_correct": 5856,
+        "n_questions": 8272,
+        "accuracy": 0.7079303675048356
+      },
+      "b100|gap": {
+        "gap": 0.09223887814313347
+      },
+      "interaction": {
+        "interaction": 0.03901151783484835
+      }
+    },
+    "interaction": {
+      "point": 0.038964181994191674,
+      "ci_lo": 0.017384916748285996,
+      "ci_hi": 0.06284722222222222,
+      "n_pairs_abs": 8264,
+      "n_pairs_struct": 8264
+    },
+    "lpm": {
+      "model": "LPM (doc-clustered robust SE)",
+      "n": 33152,
+      "n_clusters": 100,
+      "coefs": {
+        "intercept": {
+          "coef": 0.8206848288419382,
+          "se": 0.01075934297595885,
+          "z": 76.27648181452274,
+          "p": 0.0
+        },
+        "struct": {
+          "coef": -0.04685364437233446,
+          "se": 0.008332346985032798,
+          "z": -5.623102885237087,
+          "p": 1.875576183252292e-08
+        },
+        "dense": {
+          "coef": -0.012405545608287265,
+          "se": 0.010139296995827534,
+          "z": -1.2235114143902013,
+          "p": 0.2211365956385487
+        },
+        "struct_x_dense": {
+          "coef": -0.040910246841793035,
+          "se": 0.01193889740883996,
+          "z": -3.4266352612680726,
+          "p": 0.0006111093171632387
+        },
+        "ratio_c": {
+          "coef": 0.3378314798974681,
+          "se": 0.10894214123536684,
+          "z": 3.1010174397765087,
+          "p": 0.0019285693167161444
+        },
+        "multihop": {
+          "coef": -0.0723535777469277,
+          "se": 0.022570107624890885,
+          "z": -3.205725863138302,
+          "p": 0.0013472227001420922
+        },
+        "self": {
+          "coef": -0.004450026403701872,
+          "se": 0.009127298121560616,
+          "z": -0.48755133714652804,
+          "p": 0.6258676714411946
+        }
+      },
+      "struct_extra_loss_pp": -4.091024684179303,
+      "h2_gap_interaction_pp": 4.091024684179303
+    }
+  },
+  "per_sender": {
+    "deepseek-v4-flash-0731": {
+      "table": {
+        "base|abstractive": {
+          "n_correct": 1794,
+          "n_questions": 2078,
+          "accuracy": 0.8633301251203079
+        },
+        "base|structured": {
+          "n_correct": 1681,
+          "n_questions": 2078,
+          "accuracy": 0.8089509143407122
+        },
+        "base|gap": {
+          "gap": 0.05437921077959573
+        },
+        "b100|abstractive": {
+          "n_correct": 1820,
+          "n_questions": 2078,
+          "accuracy": 0.875842155919153
+        },
+        "b100|structured": {
+          "n_correct": 1572,
+          "n_questions": 2078,
+          "accuracy": 0.7564966313763234
+        },
+        "b100|gap": {
+          "gap": 0.11934552454282965
+        },
+        "interaction": {
+          "interaction": 0.06496631376323392
+        }
+      },
+      "interaction": {
+        "point": 0.06496631376323388,
+        "ci_lo": 0.03107074569789675,
+        "ci_hi": 0.10076408787010507,
+        "n_pairs_abs": 2078,
+        "n_pairs_struct": 2078
+      }
+    },
+    "deepseek-v4-pro-0813": {
+      "table": {
+        "base|abstractive": {
+          "n_correct": 1638,
+          "n_questions": 2078,
+          "accuracy": 0.7882579403272377
+        },
+        "base|structured": {
+          "n_correct": 1536,
+          "n_questions": 2078,
+          "accuracy": 0.739172281039461
+        },
+        "base|gap": {
+          "gap": 0.04908565928777675
+        },
+        "b100|abstractive": {
+          "n_correct": 1603,
+          "n_questions": 2078,
+          "accuracy": 0.7714148219441771
+        },
+        "b100|structured": {
+          "n_correct": 1498,
+          "n_questions": 2078,
+          "accuracy": 0.7208854667949952
+        },
+        "b100|gap": {
+          "gap": 0.05052935514918189
+        },
+        "interaction": {
+          "interaction": 0.0014436958614051365
+        }
+      },
+      "interaction": {
+        "point": 0.0014436958614051955,
+        "ci_lo": -0.035004730368968784,
+        "ci_hi": 0.04164442071542979,
+        "n_pairs_abs": 2078,
+        "n_pairs_struct": 2078
+      }
+    },
+    "qwen3.7-max": {
+      "table": {
+        "base|abstractive": {
+          "n_correct": 1665,
+          "n_questions": 2078,
+          "accuracy": 0.8012512030798845
+        },
+        "base|structured": {
+          "n_correct": 1615,
+          "n_questions": 2078,
+          "accuracy": 0.7771896053897979
+        },
+        "base|gap": {
+          "gap": 0.024061597690086645
+        },
+        "b100|abstractive": {
+          "n_correct": 1630,
+          "n_questions": 2078,
+          "accuracy": 0.7844080846968239
+        },
+        "b100|structured": {
+          "n_correct": 1538,
+          "n_questions": 2078,
+          "accuracy": 0.7401347449470644
+        },
+        "b100|gap": {
+          "gap": 0.044273339749759444
+        },
+        "interaction": {
+          "interaction": 0.0202117420596728
+        }
+      },
+      "interaction": {
+        "point": 0.020211742059672765,
+        "ci_lo": -0.022352315061202766,
+        "ci_hi": 0.0640038498556304,
+        "n_pairs_abs": 2078,
+        "n_pairs_struct": 2078
+      }
+    },
+    "qwen3.7-plus": {
+      "table": {
+        "base|abstractive": {
+          "n_correct": 1679,
+          "n_questions": 2078,
+          "accuracy": 0.8079884504331087
+        },
+        "base|structured": {
+          "n_correct": 1501,
+          "n_questions": 2078,
+          "accuracy": 0.7223291626564003
+        },
+        "base|gap": {
+          "gap": 0.08565928777670839
+        },
+        "b100|abstractive": {
+          "n_correct": 1586,
+          "n_questions": 2078,
+          "accuracy": 0.7632338787295476
+        },
+        "b100|structured": {
+          "n_correct": 1262,
+          "n_questions": 2078,
+          "accuracy": 0.6073147256977863
+        },
+        "b100|gap": {
+          "gap": 0.1559191530317613
+        },
+        "interaction": {
+          "interaction": 0.0702598652550529
+        }
+      },
+      "interaction": {
+        "point": 0.07025986525505293,
+        "ci_lo": 0.010402532790592486,
+        "ci_hi": 0.13196069255966308,
+        "n_pairs_abs": 2078,
+        "n_pairs_struct": 2078
+      }
+    }
+  },
+  "per_demand": {
+    "lookup": {
+      "table": {
+        "base|abstractive": {
+          "n_correct": 5602,
+          "n_questions": 6792,
+          "accuracy": 0.824793875147232
+        },
+        "base|structured": {
+          "n_correct": 5252,
+          "n_questions": 6792,
+          "accuracy": 0.7732626619552415
+        },
+        "base|gap": {
+          "gap": 0.0515312131919905
+        },
+        "b100|abstractive": {
+          "n_correct": 5553,
+          "n_questions": 6792,
+          "accuracy": 0.8175795053003534
+        },
+        "b100|structured": {
+          "n_correct": 4903,
+          "n_questions": 6792,
+          "accuracy": 0.7218786808009423
+        },
+        "b100|gap": {
+          "gap": 0.09570082449941109
+        },
+        "interaction": {
+          "interaction": 0.044169611307420586
+        }
+      },
+      "interaction": {
+        "point": 0.04416961130742049,
+        "ci_lo": 0.02507645259938838,
+        "ci_hi": 0.06433721575152523,
+        "n_pairs_abs": 6792,
+        "n_pairs_struct": 6792
+      }
+    },
+    "multi-hop": {
+      "table": {
+        "base|abstractive": {
+          "n_correct": 1174,
+          "n_questions": 1520,
+          "accuracy": 0.7723684210526316
+        },
+        "base|structured": {
+          "n_correct": 1081,
+          "n_questions": 1520,
+          "accuracy": 0.7111842105263158
+        },
+        "base|gap": {
+          "gap": 0.06118421052631584
+        },
+        "b100|abstractive": {
+          "n_correct": 1086,
+          "n_questions": 1520,
+          "accuracy": 0.7144736842105263
+        },
+        "b100|structured": {
+          "n_correct": 967,
+          "n_questions": 1520,
+          "accuracy": 0.6361842105263158
+        },
+        "b100|gap": {
+          "gap": 0.07828947368421046
+        },
+        "interaction": {
+          "interaction": 0.017105263157894623
+        }
+      },
+      "interaction": {
+        "point": 0.017105263157894735,
+        "ci_lo": -0.04316143497757848,
+        "ci_hi": 0.07865168539325842,
+        "n_pairs_abs": 1520,
+        "n_pairs_struct": 1520
+      }
+    }
+  },
+  "bootstrap": {
+    "n_boot": 4000,
+    "seed": 11
+  }
+}

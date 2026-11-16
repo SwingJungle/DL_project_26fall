@@ -1,0 +1,180 @@
+{
+  "dropped": [
+    {
+      "doc_id": "p-0000",
+      "method": "structured",
+      "level": "r50",
+      "sender": "qwen3.7-max",
+      "question": "Who stated that the ridge survey was uncertain?",
+      "qid": "p-0000-q7",
+      "demand": "lookup",
+      "answerable": true,
+      "gold": "Kamrind Furmus",
+      "pred": "Furmus",
+      "fact_ids": [
+        "f3"
+      ],
+      "source_fact": "Kamrind Furmus has said that no decision has yet been taken on the ridge survey, which is planned for 2044, and that no timetable has been agreed for one.",
+      "evidence_survived": false,
+      "missing_keys": [
+        "kamrind"
+      ],
+      "message_bytes": 423,
+      "message": "{\"v\":1,\"f\":[{\"k\":\"E\",\"x\":\"Findli founded Kuneon Survey not Nondsul ever\"},{\"k\":\"D\",\"x\":\"Kuneon Survey first came into being 2043\"},{\"k\":\"U\",\"x\":\"Furmus says no ridge survey decision yet\"},{\"k\":\"N\",\"x\":\"Nobody else looks after the seismic unit\"},{\"k\":\"T\",\"x\":\"Survey moved from Kandmeth to Togeoth 2046\"},{\"k\":\"C\",\"x\":\"Seismic unit permitted only below 15 C\"},{\"k\":\"R\",\"x\":\"Only Kuneon Survey does Kandmeth core sampling\"}]}",
+      "ratio": 0.4851
+    },
+    {
+      "doc_id": "p-0001",
+      "method": "structured",
+      "level": "r50",
+      "sender": "qwen3.7-max",
+      "question": "Who stated that the northern annex was uncertain?",
+      "qid": "p-0001-q11",
+      "demand": "lookup",
+      "answerable": true,
+      "gold": "Nisseo Bumial",
+      "pred": "unknown",
+      "fact_ids": [
+        "f10"
+      ],
+      "source_fact": "The northern annex, due in 2047, is undecided, Nisseo Bumial said.",
+      "evidence_survived": false,
+      "missing_keys": [
+        "nisseo",
+        "bumial"
+      ],
+      "message_bytes": 513,
+      "message": "{\"v\":1,\"f\":[{\"k\":\"E\",\"x\":\"Peothmem founded Tergi Survey not Kuthmaend despite older accounts\"},{\"k\":\"D\",\"x\":\"Tergi Survey relocated Lulguth to Rardeo in 2046\"},{\"k\":\"N\",\"x\":\"Only Tergi Survey indexes archives located in Lulguth now\"},{\"k\":\"C\",\"x\":\"Sensor unit runs only under 13 degrees Celsius\"},{\"k\":\"S\",\"x\":\"Withheld second tranche caused northern annex never starting\"},{\"k\":\"D\",\"x\":\"Charter records place Tergi Survey founding in year 2043\"},{\"k\":\"R\",\"x\":\"Control of telemetry rig passed to Rita recently\"}]}",
+      "ratio": 0.53
+    },
+    {
+      "doc_id": "p-0002",
+      "method": "structured",
+      "level": "r50",
+      "sender": "qwen3.7-max",
+      "question": "Under what condition does the light unit operate?",
+      "qid": "p-0002-q1",
+      "demand": "lookup",
+      "answerable": true,
+      "gold": "only below 12 degrees Celsius",
+      "pred": "unknown",
+      "fact_ids": [
+        "f5"
+      ],
+      "source_fact": "The light unit runs only below 12 degrees Celsius, never at or above.",
+      "evidence_survived": false,
+      "missing_keys": [
+        "12",
+        "degrees",
+        "celsius"
+      ],
+      "message_bytes": 402,
+      "message": "{\"v\":1,\"f\":[{\"k\":\"D\",\"x\":\"Redor Foundation moved to Foslal 2056\"},{\"k\":\"C\",\"x\":\"Humidity rig rated below 8 C only\"},{\"k\":\"N\",\"x\":\"Leomvaen did not found Redor Foundation\"},{\"k\":\"U\",\"x\":\"Dirkond Gumbis says east wing uncertain\"},{\"k\":\"S\",\"x\":\"Withheld tranche stopped east wing start\"},{\"k\":\"D\",\"x\":\"Charter records place founding in 2051\"},{\"k\":\"E\",\"x\":\"Redor conserves Vaendmeol manuscripts always\"}]}",
+      "ratio": 0.5167
+    },
+    {
+      "doc_id": "p-0003",
+      "method": "structured",
+      "level": "r50",
+      "sender": "qwen3.7-max",
+      "question": "Who stated that the digitisation wave was uncertain?",
+      "qid": "p-0003-q4",
+      "demand": "lookup",
+      "answerable": true,
+      "gold": "Velpaer Piasleo",
+      "pred": "unknown",
+      "fact_ids": [
+        "f9"
+      ],
+      "source_fact": "Velpaer Piasleo called the digitisation wave, due in 2052, unsettled.",
+      "evidence_survived": false,
+      "missing_keys": [
+        "velpaer",
+        "piasleo"
+      ],
+      "message_bytes": 477,
+      "message": "{\"v\":1,\"f\":[{\"k\":\"E\",\"x\":\"Gerviand Foundation does manuscript conservation in Zeonsim\"},{\"k\":\"D\",\"x\":\"Gerviand Foundation moved to Palfath 2051\"},{\"k\":\"N\",\"x\":\"Mialker not Fialzeos founded Gerviand Foundation\"},{\"k\":\"C\",\"x\":\"Humidity rig runs below 15 degrees Celsius\"},{\"k\":\"T\",\"x\":\"Palfath site reports every twelve hours independently\"},{\"k\":\"R\",\"x\":\"Mialker personally performs routine storage maintenance\"},{\"k\":\"D\",\"x\":\"Gerviand Foundation founded and registered 2049\"}]}",
+      "ratio": 0.5458
+    },
+    {
+      "doc_id": "p-0004",
+      "method": "structured",
+      "level": "r50",
+      "sender": "qwen3.7-max",
+      "question": "What temperature limit applies to the humidity rig?",
+      "qid": "p-0004-q3",
+      "demand": "lookup",
+      "answerable": true,
+      "gold": "below 8 degrees Celsius",
+      "pred": "unknown",
+      "fact_ids": [
+        "f4"
+      ],
+      "source_fact": "The humidity rig is rated to 8 degrees Celsius and no higher.",
+      "evidence_survived": false,
+      "missing_keys": [
+        "8",
+        "degrees",
+        "celsius"
+      ],
+      "message_bytes": 463,
+      "message": "{\"v\":1,\"f\":[{\"k\":\"D\",\"x\":\"Lupim Foundation dates from charter sealed 2044\"},{\"k\":\"U\",\"x\":\"Vimsas Sundvem said digitisation wave not 2045\"},{\"k\":\"N\",\"x\":\"Lupim Foundation established by Seorzi nobody else\"},{\"k\":\"C\",\"x\":\"Storage unit runs only below 12 C\"},{\"k\":\"T\",\"x\":\"Lupim moved whole operation to Teosnar 2048\"},{\"k\":\"E\",\"x\":\"Lupim Foundation has formal Vurleol catalogue reconciliation\"},{\"k\":\"S\",\"x\":\"Panel held second tranche causing digitisation delay\"}]}",
+      "ratio": 0.4705
+    },
+    {
+      "doc_id": "p-0005",
+      "method": "structured",
+      "level": "r50",
+      "sender": "qwen3.7-max",
+      "question": "In what year was the Feondul Survey founded?",
+      "qid": "p-0005-q7",
+      "demand": "lookup",
+      "answerable": true,
+      "gold": "2040",
+      "pred": "unknown",
+      "fact_ids": [
+        "f10"
+      ],
+      "source_fact": "The Feondul Survey dates its charter, and with it its existence, to 2040.",
+      "evidence_survived": false,
+      "missing_keys": [
+        "2040"
+      ],
+      "message_bytes": 502,
+      "message": "{\"v\":1,\"f\":[{\"k\":\"N\",\"x\":\"Rinton did not found Feondul Survey; Faethnol founded it\"},{\"k\":\"E\",\"x\":\"Sianraend holds operational control of navigation rig daily\"},{\"k\":\"D\",\"x\":\"Feondul Survey worked from Vandsial since year 2043\"},{\"k\":\"C\",\"x\":\"Only Feondul Survey handles glacial mapping in Vamrus\"},{\"k\":\"U\",\"x\":\"Raenfon Veosnae says southern traverse for 2045 uncertain\"},{\"k\":\"C\",\"x\":\"Drill unit safe only below 10 degrees Celsius\"},{\"k\":\"N\",\"x\":\"Navigation rig use above 13 degrees not permitted\"}]}",
+      "ratio": 0.5066
+    }
+  ],
+  "compact_wins": [
+    {
+      "doc_id": "p-0000",
+      "sender": "deepseek-v4-flash-0731",
+      "receiver": "deepseek-v4-flash-0731",
+      "qid": "p-0000-q2",
+      "question": "Which organisation is responsible for core sampling in Kandmeth?",
+      "gold": "Kuneon Survey",
+      "full_pred": "unknown",
+      "compact_pred": "Kuneon Survey",
+      "source_fact": "Of every body working in Kandmeth, only the Kuneon Survey is charged with core sampling.",
+      "full_message": "{\"v\":1,\"f\":[{\"k\":\"E\",\"x\":\"Kuneon Survey founded by Findli, not Nondsul\"},{\"k\":\"D\",\"x\":\"Survey began in 2043, not before\"},{\"k\":\"U\",\"x\":\"Kamrind Furmus: no ridge survey decision yet\"},{\"k\":\"D\",\"x\":\"Ridge survey planned for 2044, no timetable\"},{\"k\":\"E\",\"x\":\"Seismic unit cared for only by Findli\"},{\"k\":\"D\",\"x\":\"Survey moved 2046 Kandmeth to Togeoth\"},{\"k\":\"C\",\"x\":\"Seismic unit shuts above 15 C; navigation rig rated below 14 C\"}]}",
+      "compact_message": "[[\"E\",\"Kuneon Survey founded by Findli, not Nondsul.\"],[\"D\",\"Kuneon Survey began in 2043, not before.\"],[\"U\",\"Kamrind Furmus: no ridge survey decision, planned 2044.\"],[\"E\",\"Seismic unit cared for by Findli only.\"],[\"D\",\"2046: Kuneon Survey moved Kandmeth to Togeoth.\"],[\"C\",\"Seismic unit operates only below 15 C, shuts above.\"],[\"R\",\"Core sampling only Kuneon Survey in Kandmeth; second Togeoth site runs 12-hour cycle.\"]]",
+      "full_evidence": true,
+      "compact_evidence": true
+    },
+    {
+      "doc_id": "p-0001",
+      "sender": "deepseek-v4-flash-0731",
+      "receiver": "deepseek-v4-flash-0731",
+      "qid": "p-0001-q12",
+      "question": "Why was the northern annex delayed?",
+      "gold": "the charter committee withheld the second tranche",
+      "full_pred": "charter committee withheld tranche",
+      "compact_pred": "charter committee withheld second tranche",
+      "source_fact": "Because the charter committee withheld the second tranche, the northern annex never started.",
+      "full_message": "{\"v\":1,\"f\":[{\"k\":\"E\",\"x\":\"Tergi Survey founder was Peothmem, not Kuthmaend.\"},{\"k\":\"D\",\"x\":\"Relocation in 2046 moved Tergi Survey to Rardeo.\"},{\"k\":\"E\",\"x\":\"Sensor unit answers to Peothmem for upkeep.\"},{\"k\":\"R\",\"x\":\"Archive indexing in Lulguth is Tergi Survey's responsibility.\"},{\"k\":\"C\",\"x\":\"Sensor unit runs only under 13 degrees Celsius.\"},{\"k\":\"S\",\"x\":\"Charter committee withheld tranche, so northern annex never started.\"},{\"k\":\"D\",\"x\":\"Founding in 2043; telemetry rig control passed to Rita.\"}]}",
+      "compact_message": "[[\"E\",\"Tergi Survey founder was Peothmem, not Kuthmaend.\"],[\"D\",\"Relocation in 2046 moved Tergi Survey from Lulguth to Rardeo.\"],[\"E\",\"Charter committee ran second Rardeo site on twelve-hour cycle.\"],[\"N\",\"Sensor unit runs only under 13 C, stops past threshold.\"],[\"R\",\"Archive indexing in Lulguth is Tergi Survey's sole responsibility.\"],[\"S\",\"Charter committee withheld second tranche, so northern annex never started.\"],[\"D\",\"Founding in 2043; telemetry rig control passed to Rita.\"]]",
+      "full_evidence": false,
+      "compact_evidence": true
+    }
+  ]
+}

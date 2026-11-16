@@ -1,0 +1,90 @@
+{
+  "cells": {
+    "abstractive": {
+      "n_correct": 706,
+      "n_questions": 876,
+      "accuracy": 0.8059360730593608
+    },
+    "structured": {
+      "n_correct": 600,
+      "n_questions": 876,
+      "accuracy": 0.684931506849315
+    },
+    "compact": {
+      "n_correct": 642,
+      "n_questions": 876,
+      "accuracy": 0.7328767123287672
+    }
+  },
+  "comparisons": {
+    "compact_vs_structured": {
+      "n_pairs": 876,
+      "both_correct": 520,
+      "both_wrong": 154,
+      "a_only_correct": 122,
+      "b_only_correct": 80,
+      "accuracy_a": 0.7328767123287672,
+      "accuracy_b": 0.684931506849315,
+      "diff_a_minus_b": 0.047945205479452135,
+      "mcnemar_p": 0.003808622600903978,
+      "ci_lo": 0.001152073732718894,
+      "ci_hi": 0.08755760368663594
+    },
+    "compact_vs_abstractive": {
+      "n_pairs": 876,
+      "both_correct": 572,
+      "both_wrong": 100,
+      "a_only_correct": 70,
+      "b_only_correct": 134,
+      "accuracy_a": 0.7328767123287672,
+      "accuracy_b": 0.8059360730593608,
+      "diff_a_minus_b": -0.0730593607305936,
+      "mcnemar_p": 8.775251003798692e-06,
+      "ci_lo": -0.12612612612612611,
+      "ci_hi": -0.02511415525114155
+    },
+    "abstractive_vs_structured": {
+      "n_pairs": 876,
+      "both_correct": 548,
+      "both_wrong": 118,
+      "a_only_correct": 158,
+      "b_only_correct": 52,
+      "accuracy_a": 0.8059360730593608,
+      "accuracy_b": 0.684931506849315,
+      "diff_a_minus_b": 0.12100456621004574,
+      "mcnemar_p": 1.2712993425732389e-13,
+      "ci_lo": 0.0779816513761468,
+      "ci_hi": 0.16363636363636364
+    }
+  },
+  "compliance": {
+    "abstractive": {
+      "n": 80,
+      "compliant": 36,
+      "bytes": 36326,
+      "compliant_rate": 0.45,
+      "mean_bytes": 454.075
+    },
+    "structured": {
+      "n": 80,
+      "compliant": 41,
+      "bytes": 35260,
+      "compliant_rate": 0.5125,
+      "mean_bytes": 440.75
+    },
+    "compact": {
+      "n": 80,
+      "compliant": 35,
+      "bytes": 34862,
+      "compliant_rate": 0.4375,
+      "mean_bytes": 435.775
+    }
+  },
+  "n_rows": 2628,
+  "n_docs": 20,
+  "n_senders": 4,
+  "bootstrap": {
+    "n_boot": 4000,
+    "seed": 11
+  }
+}

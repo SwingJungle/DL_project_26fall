@@ -1,0 +1,1434 @@
+{
+  "datasets": {
+    "pilot_trans": {
+      "label": "transmission, 25 docs (pilot)",
+      "path": "results/pilot_trans/predictions.jsonl",
+      "questions_per_cell": "1,106-1,116",
+      "methods": {
+        "abstractive": {
+          "n_cells": 16,
+          "n_questions": 4424,
+          "cells": {
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.7777777777777778,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8351254480286738,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.8028673835125448,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.8172043010752689,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.8530465949820788,
+            "qwen3.7-max|qwen3.7-plus": 0.8745519713261649,
+            "qwen3.7-max|qwen3.7-max": 0.8100358422939068,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.7955390334572491,
+            "qwen3.7-plus|qwen3.7-max": 0.8215613382899628,
+            "qwen3.7-plus|qwen3.7-plus": 0.8513011152416357,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.8401486988847584,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.899641577060932,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.931899641577061,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8422939068100358,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.9175627240143369,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.9283154121863799
+          },
+          "accuracy": 0.8499295479074229,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.814516129032258,
+            "deepseek-v4-pro-0813": 0.9193548387096775,
+            "qwen3.7-max": 0.8387096774193549,
+            "qwen3.7-plus": 0.8271375464684014
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.8225406723428069,
+            "deepseek-v4-pro-0813": 0.8632629811728025,
+            "qwen3.7-max": 0.8415910514183689,
+            "qwen3.7-plus": 0.8723234866957136
+          },
+          "ss": {
+            "sender": 0.02687736825108351,
+            "receiver": 0.0059957998619521065,
+            "residual": 0.0018730526822525785
+          },
+          "variance_share": {
+            "sender": 0.7735335710158224,
+            "receiver": 0.1725597698027975,
+            "residual": 0.053906659181379976
+          },
+          "variance_component": {
+            "sender": 0.0021877514464166098,
+            "receiver": 0.0004476207473223262,
+            "residual": 0.00020811696469473094
+          },
+          "spread": {
+            "sender": 0.10483870967741948,
+            "receiver": 0.04978281435290666
+          },
+          "best_cell": [
+            "deepseek-v4-pro-0813",
+            "qwen3.7-max"
+          ],
+          "best_cell_accuracy": 0.931899641577061,
+          "self_accuracy": 0.8391693648319143,
+          "cross_accuracy": 0.8535162755992591,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "deepseek-v4-pro-0813",
+            "deepseek-v4-pro-0813": "qwen3.7-max",
+            "qwen3.7-max": "qwen3.7-plus",
+            "qwen3.7-plus": "qwen3.7-plus"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": true
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.5786864252694552,
+                0.8913164862642494
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.07213847698947791,
+                0.2976757712010379
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.025089229110464233,
+                0.16647999969055088
+              ]
+            }
+          }
+        },
+        "structured": {
+          "n_cells": 16,
+          "n_questions": 4464,
+          "cells": {
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.6917562724014337,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.7060931899641577,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.7025089605734767,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.7562724014336918,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.7706093189964157,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7096774193548387,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.8172043010752689,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.7956989247311828,
+            "qwen3.7-plus|qwen3.7-plus": 0.8494623655913979,
+            "qwen3.7-plus|qwen3.7-max": 0.8028673835125448,
+            "qwen3.7-max|qwen3.7-plus": 0.7491039426523297,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.910394265232975,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.8781362007168458,
+            "qwen3.7-max|qwen3.7-max": 0.7168458781362007,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.8351254480286738,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.9175627240143369
+          },
+          "accuracy": 0.7880824372759857,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.71415770609319,
+            "deepseek-v4-pro-0813": 0.8853046594982079,
+            "qwen3.7-max": 0.7365591397849462,
+            "qwen3.7-plus": 0.8163082437275986
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.7616487455197133,
+            "deepseek-v4-pro-0813": 0.8001792114695341,
+            "qwen3.7-max": 0.7724014336917563,
+            "qwen3.7-plus": 0.818100358422939
+          },
+          "ss": {
+            "sender": 0.07347349083387934,
+            "receiver": 0.007968165876594586,
+            "residual": 0.002880872547886076
+          },
+          "variance_share": {
+            "sender": 0.8713387926109314,
+            "receiver": 0.09449628642163382,
+            "residual": 0.03416492096743477
+          },
+          "variance_component": {
+            "sender": 0.006042766665381998,
+            "receiver": 0.0005839895856082689,
+            "residual": 0.00032009694976511954
+          },
+          "spread": {
+            "sender": 0.17114695340501795,
+            "receiver": 0.056451612903225756
+          },
+          "best_cell": [
+            "deepseek-v4-pro-0813",
+            "qwen3.7-plus"
+          ],
+          "best_cell_accuracy": 0.9175627240143369,
+          "self_accuracy": 0.7956989247311828,
+          "cross_accuracy": 0.7855436081242533,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "qwen3.7-plus",
+            "deepseek-v4-pro-0813": "qwen3.7-plus",
+            "qwen3.7-max": "deepseek-v4-pro-0813",
+            "qwen3.7-plus": "qwen3.7-plus"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": true
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.6554773481728395,
+                0.940776985700426
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.032779292955282154,
+                0.21656245900922594
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.015765394605708152,
+                0.15940960866503923
+              ]
+            }
+          }
+        },
+        "pooled": {
+          "n_cells": 16,
+          "n_questions": 8888,
+          "cells": {
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.7419354838709677,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.7473118279569892,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.7956989247311828,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7634408602150538,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.7724014336917563,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.8118279569892473,
+            "qwen3.7-max|qwen3.7-plus": 0.8118279569892473,
+            "qwen3.7-max|qwen3.7-max": 0.7634408602150538,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.7956204379562044,
+            "qwen3.7-plus|qwen3.7-max": 0.8120437956204379,
+            "qwen3.7-plus|qwen3.7-plus": 0.8503649635036497,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.8284671532846716,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.8673835125448028,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.9050179211469535,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.9139784946236559,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.9229390681003584
+          },
+          "accuracy": 0.8189812907150145,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.764336917562724,
+            "deepseek-v4-pro-0813": 0.9023297491039426,
+            "qwen3.7-max": 0.7876344086021505,
+            "qwen3.7-plus": 0.8216240875912408
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.7920950736467571,
+            "deepseek-v4-pro-0813": 0.8316687596473328,
+            "qwen3.7-max": 0.8069536012348586,
+            "qwen3.7-plus": 0.8452077283311095
+          },
+          "ss": {
+            "sender": 0.043690337706177695,
+            "receiver": 0.006865327521647877,
+            "residual": 0.0007460137392905217
+          },
+          "variance_share": {
+            "sender": 0.8516356303695792,
+            "receiver": 0.13382266740331225,
+            "residual": 0.014541702227108586
+          },
+          "variance_component": {
+            "sender": 0.003620138871645627,
+            "receiver": 0.0005513880229348086,
+            "residual": 8.289041547672464e-05
+          },
+          "spread": {
+            "sender": 0.13799283154121855,
+            "receiver": 0.053112654684352334
+          },
+          "best_cell": [
+            "deepseek-v4-pro-0813",
+            "qwen3.7-plus"
+          ],
+          "best_cell_accuracy": 0.9229390681003584,
+          "self_accuracy": 0.8174299505533318,
+          "cross_accuracy": 0.8194984041022421,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "qwen3.7-plus",
+            "deepseek-v4-pro-0813": "qwen3.7-plus",
+            "qwen3.7-max": "deepseek-v4-pro-0813",
+            "qwen3.7-plus": "qwen3.7-plus"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": true
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.6919896223866739,
+                0.925389201848067
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.05390049097089151,
+                0.25813697021785953
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.01021671364863453,
+                0.07788003580510681
+              ]
+            }
+          }
+        }
+      }
+    },
+    "base4_readable": {
+      "label": "readable, base density, 10 docs",
+      "path": "results/v3base4/predictions.jsonl",
+      "questions_per_cell": "448",
+      "methods": {
+        "abstractive": {
+          "n_cells": 16,
+          "n_questions": 1792,
+          "cells": {
+            "qwen3.7-max|qwen3.7-max": 0.7767857142857143,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.7767857142857143,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7678571428571429,
+            "qwen3.7-max|qwen3.7-plus": 0.7857142857142857,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.8571428571428571,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.8571428571428571,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8482142857142857,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8660714285714286,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.7767857142857143,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.7857142857142857,
+            "qwen3.7-plus|qwen3.7-max": 0.7410714285714286,
+            "qwen3.7-plus|qwen3.7-plus": 0.75,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7767857142857143,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7857142857142857,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7767857142857143,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7678571428571429
+          },
+          "accuracy": 0.7935267857142857,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.8571428571428571,
+            "deepseek-v4-pro-0813": 0.7767857142857143,
+            "qwen3.7-max": 0.7767857142857143,
+            "qwen3.7-plus": 0.7633928571428572
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.7946428571428572,
+            "deepseek-v4-pro-0813": 0.7946428571428572,
+            "qwen3.7-max": 0.7879464285714286,
+            "qwen3.7-plus": 0.796875
+          },
+          "ss": {
+            "sender": 0.022062340561224445,
+            "receiver": 0.00017936862244897933,
+            "residual": 0.0016541772959183642
+          },
+          "variance_share": {
+            "sender": 0.9232693911592994,
+            "receiver": 0.007506255212677235,
+            "residual": 0.06922435362802336
+          },
+          "variance_component": {
+            "sender": 0.0017925790107709714,
+            "receiver": 0.0,
+            "residual": 0.0001837974773242627
+          },
+          "spread": {
+            "sender": 0.09374999999999989,
+            "receiver": 0.008928571428571397
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "qwen3.7-plus"
+          ],
+          "best_cell_accuracy": 0.8660714285714286,
+          "self_accuracy": 0.7879464285714286,
+          "cross_accuracy": 0.7953869047619048,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "qwen3.7-plus",
+            "deepseek-v4-pro-0813": "qwen3.7-plus",
+            "qwen3.7-max": "qwen3.7-plus",
+            "qwen3.7-plus": "deepseek-v4-pro-0813"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.7333333333333338,
+                0.960185185185185
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.0013273802341015883,
+                0.1305285868392664
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.02618417181523975,
+                0.1977881752445763
+              ]
+            }
+          }
+        },
+        "structured": {
+          "n_cells": 16,
+          "n_questions": 1792,
+          "cells": {
+            "qwen3.7-max|qwen3.7-max": 0.7767857142857143,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7589285714285714,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.7767857142857143,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7589285714285714,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7678571428571429,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7589285714285714,
+            "qwen3.7-max|qwen3.7-plus": 0.7589285714285714,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7767857142857143,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.7857142857142857,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.7678571428571429,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8214285714285714,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8125,
+            "qwen3.7-plus|qwen3.7-plus": 0.7410714285714286,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.75,
+            "qwen3.7-plus|qwen3.7-max": 0.7678571428571429,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.7589285714285714
+          },
+          "accuracy": 0.7712053571428571,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.796875,
+            "deepseek-v4-pro-0813": 0.765625,
+            "qwen3.7-max": 0.7678571428571428,
+            "qwen3.7-plus": 0.7544642857142857
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.7633928571428571,
+            "deepseek-v4-pro-0813": 0.78125,
+            "qwen3.7-max": 0.7678571428571429,
+            "qwen3.7-plus": 0.7723214285714286
+          },
+          "ss": {
+            "sender": 0.003926179846938779,
+            "receiver": 0.0006975446428571448,
+            "residual": 0.002052774234693876
+          },
+          "variance_share": {
+            "sender": 0.5880597014925375,
+            "receiver": 0.10447761194029875,
+            "residual": 0.3074626865671638
+          },
+          "variance_component": {
+            "sender": 0.0002701601473922905,
+            "receiver": 1.107213718821064e-06,
+            "residual": 0.00022808602607709736
+          },
+          "spread": {
+            "sender": 0.0424107142857143,
+            "receiver": 0.017857142857142905
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "deepseek-v4-pro-0813"
+          ],
+          "best_cell_accuracy": 0.8214285714285714,
+          "self_accuracy": 0.7678571428571429,
+          "cross_accuracy": 0.7723214285714286,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "deepseek-v4-pro-0813",
+            "deepseek-v4-pro-0813": "qwen3.7-plus",
+            "qwen3.7-max": "deepseek-v4-pro-0813",
+            "qwen3.7-plus": "qwen3.7-max"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.09442548350398149,
+                0.9071180555555556
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.023346889591806013,
+                0.33333333333333326
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.05082212257100144,
+                0.6927772126144459
+              ]
+            }
+          }
+        },
+        "pooled": {
+          "n_cells": 16,
+          "n_questions": 3584,
+          "cells": {
+            "qwen3.7-max|qwen3.7-max": 0.7767857142857143,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7633928571428571,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.7767857142857143,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7678571428571429,
+            "qwen3.7-max|qwen3.7-plus": 0.7723214285714286,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7678571428571429,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7678571428571429,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.78125,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.8214285714285714,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.8125,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8348214285714286,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8392857142857143,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.7633928571428571,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.7723214285714286,
+            "qwen3.7-plus|qwen3.7-max": 0.7544642857142857,
+            "qwen3.7-plus|qwen3.7-plus": 0.7455357142857143
+          },
+          "accuracy": 0.7823660714285714,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.8270089285714286,
+            "deepseek-v4-pro-0813": 0.7712053571428572,
+            "qwen3.7-max": 0.7723214285714286,
+            "qwen3.7-plus": 0.7589285714285714
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.7790178571428571,
+            "deepseek-v4-pro-0813": 0.7879464285714286,
+            "qwen3.7-max": 0.7779017857142857,
+            "qwen3.7-plus": 0.7845982142857143
+          },
+          "ss": {
+            "sender": 0.011071029974489804,
+            "receiver": 0.00026905293367347294,
+            "residual": 0.0008370535714285712
+          },
+          "variance_share": {
+            "sender": 0.9091653027823239,
+            "receiver": 0.02209492635024577,
+            "residual": 0.06873977086743036
+          },
+          "variance_component": {
+            "sender": 0.0008993343431122455,
+            "receiver": 0.0,
+            "residual": 9.300595238095235e-05
+          },
+          "spread": {
+            "sender": 0.0680803571428572,
+            "receiver": 0.010044642857142905
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "qwen3.7-plus"
+          ],
+          "best_cell_accuracy": 0.8392857142857143,
+          "self_accuracy": 0.7779017857142857,
+          "cross_accuracy": 0.7838541666666666,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "qwen3.7-plus",
+            "deepseek-v4-pro-0813": "qwen3.7-plus",
+            "qwen3.7-max": "deepseek-v4-pro-0813",
+            "qwen3.7-plus": "deepseek-v4-pro-0813"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.5948387096774181,
+                0.9569385046453325
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.005093671760338382,
+                0.13449939686369122
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.026600229973169763,
+                0.3175675675675675
+              ]
+            }
+          }
+        }
+      }
+    },
+    "b1004_readable": {
+      "label": "readable, b100 density, 10 docs",
+      "path": "results/v3probe4/predictions_4x4.jsonl",
+      "questions_per_cell": "448",
+      "methods": {
+        "abstractive": {
+          "n_cells": 16,
+          "n_questions": 1792,
+          "cells": {
+            "qwen3.7-max|qwen3.7-max": 0.7678571428571429,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7767857142857143,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.7678571428571429,
+            "qwen3.7-max|qwen3.7-plus": 0.7678571428571429,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.8839285714285714,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.8660714285714286,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8839285714285714,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8660714285714286,
+            "qwen3.7-plus|qwen3.7-plus": 0.75,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.7589285714285714,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.7232142857142857,
+            "qwen3.7-plus|qwen3.7-max": 0.7232142857142857,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.8214285714285714,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.8214285714285714,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.8214285714285714,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.8214285714285714
+          },
+          "accuracy": 0.8013392857142857,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.875,
+            "deepseek-v4-pro-0813": 0.8214285714285714,
+            "qwen3.7-max": 0.7700892857142858,
+            "qwen3.7-plus": 0.7388392857142857
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.8102678571428571,
+            "deepseek-v4-pro-0813": 0.7991071428571428,
+            "qwen3.7-max": 0.7946428571428572,
+            "qwen3.7-plus": 0.8013392857142857
+          },
+          "ss": {
+            "sender": 0.042849170918367326,
+            "receiver": 0.0005181760204081577,
+            "residual": 0.0008769132653061211
+          },
+          "variance_share": {
+            "sender": 0.9684684684684686,
+            "receiver": 0.011711711711711592,
+            "residual": 0.0198198198198198
+          },
+          "variance_component": {
+            "sender": 0.003546405541383218,
+            "receiver": 1.8822633219954218e-05,
+            "residual": 9.743480725623568e-05
+          },
+          "spread": {
+            "sender": 0.1361607142857143,
+            "receiver": 0.015624999999999889
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "deepseek-v4-flash-0731"
+          ],
+          "best_cell_accuracy": 0.8839285714285714,
+          "self_accuracy": 0.8058035714285714,
+          "cross_accuracy": 0.7998511904761905,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "deepseek-v4-flash-0731",
+            "deepseek-v4-pro-0813": "deepseek-v4-flash-0731",
+            "qwen3.7-max": "deepseek-v4-flash-0731",
+            "qwen3.7-plus": "deepseek-v4-flash-0731"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": true,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.8406339423288581,
+                0.9872318313414
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.0029832935560858867,
+                0.06587712805329346
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.007296442177309993,
+                0.09980489269097986
+              ]
+            }
+          }
+        },
+        "structured": {
+          "n_cells": 16,
+          "n_questions": 1792,
+          "cells": {
+            "qwen3.7-max|qwen3.7-max": 0.6875,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7053571428571429,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.6875,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.7589285714285714,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.7678571428571429,
+            "qwen3.7-max|qwen3.7-plus": 0.6875,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.7857142857142857,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7053571428571429,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.7678571428571429,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7142857142857143,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7053571428571429,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7410714285714286,
+            "qwen3.7-plus|qwen3.7-plus": 0.5892857142857143,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.6071428571428571,
+            "qwen3.7-plus|qwen3.7-max": 0.5892857142857143,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.6071428571428571
+          },
+          "accuracy": 0.6941964285714286,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.7700892857142857,
+            "deepseek-v4-pro-0813": 0.7165178571428572,
+            "qwen3.7-max": 0.6919642857142857,
+            "qwen3.7-plus": 0.5982142857142857
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.703125,
+            "deepseek-v4-pro-0813": 0.6919642857142857,
+            "qwen3.7-max": 0.6897321428571429,
+            "qwen3.7-plus": 0.6919642857142857
+          },
+          "ss": {
+            "sender": 0.06190210459183675,
+            "receiver": 0.0004384566326530601,
+            "residual": 0.001355229591836734
+          },
+          "variance_share": {
+            "sender": 0.971839799749687,
+            "receiver": 0.00688360450563202,
+            "residual": 0.021276595744680833
+          },
+          "variance_component": {
+            "sender": 0.005120863449546487,
+            "receiver": 0.0,
+            "residual": 0.0001505810657596371
+          },
+          "spread": {
+            "sender": 0.171875,
+            "receiver": 0.013392857142857095
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "qwen3.7-plus"
+          ],
+          "best_cell_accuracy": 0.7857142857142857,
+          "self_accuracy": 0.6852678571428572,
+          "cross_accuracy": 0.6971726190476191,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "qwen3.7-plus",
+            "deepseek-v4-pro-0813": "deepseek-v4-flash-0731",
+            "qwen3.7-max": "deepseek-v4-flash-0731",
+            "qwen3.7-plus": "deepseek-v4-flash-0731"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.8754863813229578,
+                0.9817635624668671
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.0019261075118193992,
+                0.0377992868059094
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.011790512750205675,
+                0.10701107011070123
+              ]
+            }
+          }
+        },
+        "pooled": {
+          "n_cells": 16,
+          "n_questions": 3584,
+          "cells": {
+            "qwen3.7-max|qwen3.7-max": 0.7276785714285714,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7410714285714286,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.7276785714285714,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.8214285714285714,
+            "qwen3.7-max|qwen3.7-plus": 0.7276785714285714,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.8169642857142857,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8258928571428571,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8258928571428571,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7633928571428571,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7678571428571429,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7633928571428571,
+            "qwen3.7-plus|qwen3.7-plus": 0.6696428571428571,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.6830357142857143,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.6651785714285714,
+            "qwen3.7-plus|qwen3.7-max": 0.65625,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.78125
+          },
+          "accuracy": 0.7477678571428571,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.8225446428571428,
+            "deepseek-v4-pro-0813": 0.7689732142857143,
+            "qwen3.7-max": 0.7310267857142857,
+            "qwen3.7-plus": 0.6685267857142857
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.7566964285714286,
+            "deepseek-v4-pro-0813": 0.7455357142857142,
+            "qwen3.7-max": 0.7421875,
+            "qwen3.7-plus": 0.7466517857142857
+          },
+          "ss": {
+            "sender": 0.05040258290816324,
+            "receiver": 0.0004683514030612286,
+            "residual": 0.00030891262755102146
+          },
+          "variance_share": {
+            "sender": 0.9848130841121494,
+            "receiver": 0.009151090342679212,
+            "residual": 0.006035825545171363
+          },
+          "variance_component": {
+            "sender": 0.0041916343360260755,
+            "receiver": 3.044837726757401e-05,
+            "residual": 3.432362528344683e-05
+          },
+          "spread": {
+            "sender": 0.1540178571428571,
+            "receiver": 0.014508928571428603
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "qwen3.7-plus"
+          ],
+          "best_cell_accuracy": 0.8258928571428571,
+          "self_accuracy": 0.7455357142857142,
+          "cross_accuracy": 0.7485119047619048,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "deepseek-v4-pro-0813",
+            "deepseek-v4-pro-0813": "deepseek-v4-flash-0731",
+            "qwen3.7-max": "deepseek-v4-flash-0731",
+            "qwen3.7-plus": "deepseek-v4-flash-0731"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.9362507704499429,
+                0.9907740566472922
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.0028724963361016365,
+                0.032249173098125784
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.003761894224385921,
+                0.03556485355648538
+              ]
+            }
+          }
+        }
+      }
+    },
+    "main_base4": {
+      "label": "MAIN, base density, 30 docs, 4x4",
+      "path": "results/main_v3/predictions_base_cross.jsonl",
+      "questions_per_cell": "1,304",
+      "methods": {
+        "abstractive": {
+          "n_cells": 16,
+          "n_questions": 5216,
+          "cells": {
+            "qwen3.7-max|qwen3.7-max": 0.8067484662576687,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.8558282208588958,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.8650306748466258,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7975460122699386,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.8128834355828221,
+            "qwen3.7-max|qwen3.7-plus": 0.8159509202453987,
+            "qwen3.7-plus|qwen3.7-plus": 0.8159509202453987,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8711656441717791,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8619631901840491,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.8128834355828221,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7944785276073619,
+            "qwen3.7-plus|qwen3.7-max": 0.8067484662576687,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7822085889570553,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7975460122699386,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.8220858895705522,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7914110429447853
+          },
+          "accuracy": 0.8194018404907976,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.8634969325153374,
+            "deepseek-v4-pro-0813": 0.7914110429447853,
+            "qwen3.7-max": 0.808282208588957,
+            "qwen3.7-plus": 0.8144171779141104
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.8121165644171779,
+            "deepseek-v4-pro-0813": 0.8251533742331288,
+            "qwen3.7-max": 0.8190184049079754,
+            "qwen3.7-plus": 0.821319018404908
+          },
+          "ss": {
+            "sender": 0.011505419850201372,
+            "receiver": 0.0003599119274342264,
+            "residual": 0.00021406526402950677
+          },
+          "variance_share": {
+            "sender": 0.9524829600778971,
+            "receiver": 0.029795520934761306,
+            "residual": 0.017721518987341655
+          },
+          "variance_component": {
+            "sender": 0.000952838730182628,
+            "receiver": 2.40464032853659e-05,
+            "residual": 2.3785029336611865e-05
+          },
+          "spread": {
+            "sender": 0.07208588957055218,
+            "receiver": 0.0130368098159509
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "deepseek-v4-pro-0813"
+          ],
+          "best_cell_accuracy": 0.8711656441717791,
+          "self_accuracy": 0.8182515337423313,
+          "cross_accuracy": 0.8197852760736196,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "deepseek-v4-pro-0813",
+            "deepseek-v4-pro-0813": "qwen3.7-max",
+            "qwen3.7-max": "qwen3.7-plus",
+            "qwen3.7-plus": "deepseek-v4-pro-0813"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.714285714285715,
+                0.9781834372217274
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.0039797291493687435,
+                0.1838243287313839
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.00970384373030878,
+                0.14308537194208704
+              ]
+            }
+          }
+        },
+        "structured": {
+          "n_cells": 16,
+          "n_questions": 5216,
+          "cells": {
+            "qwen3.7-plus|qwen3.7-plus": 0.7208588957055214,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.7177914110429447,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.7269938650306749,
+            "qwen3.7-plus|qwen3.7-max": 0.7177914110429447,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.7975460122699386,
+            "qwen3.7-max|qwen3.7-max": 0.7914110429447853,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8159509202453987,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7730061349693251,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.8128834355828221,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8282208588957055,
+            "qwen3.7-max|qwen3.7-plus": 0.7852760736196319,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7331288343558282,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7392638036809815,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7300613496932515,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7423312883435583,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.7883435582822086
+          },
+          "accuracy": 0.7638036809815951,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.8136503067484662,
+            "deepseek-v4-pro-0813": 0.7361963190184049,
+            "qwen3.7-max": 0.7845092024539877,
+            "qwen3.7-plus": 0.7208588957055214
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.7569018404907976,
+            "deepseek-v4-pro-0813": 0.7638036809815951,
+            "qwen3.7-max": 0.7653374233128833,
+            "qwen3.7-plus": 0.7691717791411044
+          },
+          "ss": {
+            "sender": 0.022079302947043532,
+            "receiver": 0.00031521698219729805,
+            "residual": 0.0005081109563777358
+          },
+          "variance_share": {
+            "sender": 0.9640509449465897,
+            "receiver": 0.01376335250616272,
+            "residual": 0.02218570254724744
+          },
+          "variance_component": {
+            "sender": 0.0018258277190209128,
+            "receiver": 1.2153888617059956e-05,
+            "residual": 5.645677293085953e-05
+          },
+          "spread": {
+            "sender": 0.09279141104294475,
+            "receiver": 0.012269938650306789
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "qwen3.7-plus"
+          ],
+          "best_cell_accuracy": 0.8282208588957055,
+          "self_accuracy": 0.7607361963190183,
+          "cross_accuracy": 0.7648261758691206,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "qwen3.7-plus",
+            "deepseek-v4-pro-0813": "qwen3.7-plus",
+            "qwen3.7-max": "qwen3.7-max",
+            "qwen3.7-plus": "deepseek-v4-flash-0731"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": true,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.8534665455646371,
+                0.9772967772967774
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.0015503875968991608,
+                0.06933247339567859
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.012280728125422781,
+                0.10144413927527283
+              ]
+            }
+          }
+        },
+        "pooled": {
+          "n_cells": 16,
+          "n_questions": 10432,
+          "cells": {
+            "qwen3.7-max|qwen3.7-max": 0.799079754601227,
+            "qwen3.7-plus|qwen3.7-plus": 0.7684049079754601,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.7699386503067485,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.8266871165644172,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.7699386503067485,
+            "qwen3.7-plus|qwen3.7-max": 0.7622699386503068,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.838957055214724,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7852760736196319,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.8006134969325154,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.843558282208589,
+            "qwen3.7-max|qwen3.7-plus": 0.8006134969325154,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8450920245398773,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7638036809815951,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7561349693251533,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7684049079754601,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7668711656441718
+          },
+          "accuracy": 0.7916027607361963,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.8385736196319018,
+            "deepseek-v4-pro-0813": 0.7638036809815951,
+            "qwen3.7-max": 0.7963957055214724,
+            "qwen3.7-plus": 0.7676380368098159
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.7845092024539877,
+            "deepseek-v4-pro-0813": 0.794478527607362,
+            "qwen3.7-max": 0.7921779141104295,
+            "qwen3.7-plus": 0.7952453987730062
+          },
+          "ss": {
+            "sender": 0.014305322932741154,
+            "receiver": 0.0002887528698859615,
+            "residual": 0.000215829538183597
+          },
+          "variance_share": {
+            "sender": 0.9659293968153116,
+            "receiver": 0.019497279911051397,
+            "residual": 0.014573323273636956
+          },
+          "variance_component": {
+            "sender": 0.0011861149794455516,
+            "receiver": 1.8067474207619097e-05,
+            "residual": 2.3981059798177447e-05
+          },
+          "spread": {
+            "sender": 0.07476993865030668,
+            "receiver": 0.010736196319018454
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "qwen3.7-plus"
+          ],
+          "best_cell_accuracy": 0.8450920245398773,
+          "self_accuracy": 0.7894938650306749,
+          "cross_accuracy": 0.7923057259713702,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "qwen3.7-plus",
+            "deepseek-v4-pro-0813": "qwen3.7-max",
+            "qwen3.7-max": "deepseek-v4-pro-0813",
+            "qwen3.7-plus": "deepseek-v4-flash-0731"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.8541963328880342,
+                0.9812532461580766
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.0028496724345603856,
+                0.0969979099372979
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.008510240344150438,
+                0.07803992740471932
+              ]
+            }
+          }
+        }
+      }
+    },
+    "main_b1004": {
+      "label": "MAIN, b100 density, 30 docs, 4x4",
+      "path": "results/main_v3/predictions_b100_cross.jsonl",
+      "questions_per_cell": "1,304",
+      "methods": {
+        "abstractive": {
+          "n_cells": 16,
+          "n_questions": 5216,
+          "cells": {
+            "qwen3.7-plus|qwen3.7-plus": 0.7607361963190185,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.7730061349693251,
+            "qwen3.7-plus|qwen3.7-max": 0.754601226993865,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.8895705521472392,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8895705521472392,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8895705521472392,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.8588957055214724,
+            "qwen3.7-max|qwen3.7-max": 0.7730061349693251,
+            "qwen3.7-max|qwen3.7-plus": 0.7760736196319018,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.803680981595092,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7668711656441718,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7699386503067485,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7668711656441718,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7852760736196319,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.7730061349693251,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7791411042944786
+          },
+          "accuracy": 0.8006134969325154,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.8819018404907976,
+            "deepseek-v4-pro-0813": 0.7707055214723927,
+            "qwen3.7-max": 0.7845092024539877,
+            "qwen3.7-plus": 0.7653374233128835
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.803680981595092,
+            "deepseek-v4-pro-0813": 0.808282208588957,
+            "qwen3.7-max": 0.7891104294478528,
+            "qwen3.7-plus": 0.8013803680981595
+          },
+          "ss": {
+            "sender": 0.03602412586096578,
+            "receiver": 0.00080450901426474,
+            "residual": 0.0008280326696526017
+          },
+          "variance_share": {
+            "sender": 0.9566466766616694,
+            "receiver": 0.021364317841079346,
+            "residual": 0.021989005497251357
+          },
+          "variance_component": {
+            "sender": 0.002979009580923465,
+            "receiver": 4.404151036504496e-05,
+            "residual": 9.200362996140019e-05
+          },
+          "spread": {
+            "sender": 0.1165644171779141,
+            "receiver": 0.01917177914110424
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "deepseek-v4-flash-0731"
+          ],
+          "best_cell_accuracy": 0.8895705521472392,
+          "self_accuracy": 0.7975460122699387,
+          "cross_accuracy": 0.8016359918200409,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "deepseek-v4-flash-0731",
+            "deepseek-v4-pro-0813": "qwen3.7-plus",
+            "qwen3.7-max": "deepseek-v4-pro-0813",
+            "qwen3.7-plus": "deepseek-v4-flash-0731"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": true,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.8223406417233049,
+                0.9812827055312892
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.003715432760641312,
+                0.09978420217224553
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.009447958147887865,
+                0.09525063646738673
+              ]
+            }
+          }
+        },
+        "structured": {
+          "n_cells": 16,
+          "n_questions": 5216,
+          "cells": {
+            "qwen3.7-plus|qwen3.7-plus": 0.5950920245398773,
+            "qwen3.7-max|qwen3.7-max": 0.7576687116564417,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.5950920245398773,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7300613496932515,
+            "qwen3.7-plus|qwen3.7-max": 0.5858895705521472,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.7576687116564417,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.7760736196319018,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.7638036809815951,
+            "qwen3.7-max|qwen3.7-plus": 0.7515337423312883,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.7730061349693251,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.7361963190184049,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.7147239263803681,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7239263803680982,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.7116564417177914,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.6104294478527608,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7208588957055214
+          },
+          "accuracy": 0.7064800613496932,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.7676380368098159,
+            "deepseek-v4-pro-0813": 0.7177914110429447,
+            "qwen3.7-max": 0.7438650306748467,
+            "qwen3.7-plus": 0.5966257668711656
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.700920245398773,
+            "deepseek-v4-pro-0813": 0.7062883435582822,
+            "qwen3.7-max": 0.7078220858895705,
+            "qwen3.7-plus": 0.7108895705521472
+          },
+          "ss": {
+            "sender": 0.06933538616432683,
+            "receiver": 0.00020877244156724007,
+            "residual": 0.0009086011893560165
+          },
+          "variance_share": {
+            "sender": 0.9841401013364053,
+            "receiver": 0.0029632968555664088,
+            "residual": 0.012896601808028454
+          },
+          "variance_component": {
+            "sender": 0.005752709925100679,
+            "receiver": 0.0,
+            "residual": 0.00010095568770622406
+          },
+          "spread": {
+            "sender": 0.17101226993865026,
+            "receiver": 0.009969325153374231
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "qwen3.7-max"
+          ],
+          "best_cell_accuracy": 0.7760736196319018,
+          "self_accuracy": 0.7062883435582822,
+          "cross_accuracy": 0.7065439672801636,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "qwen3.7-max",
+            "deepseek-v4-pro-0813": "qwen3.7-plus",
+            "qwen3.7-max": "qwen3.7-max",
+            "qwen3.7-plus": "deepseek-v4-pro-0813"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": true,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.9096839985879953,
+                0.9912922040581615
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.0007324934075593401,
+                0.03114340562580329
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.005866542847193052,
+                0.06909060584580738
+              ]
+            }
+          }
+        },
+        "pooled": {
+          "n_cells": 16,
+          "n_questions": 10432,
+          "cells": {
+            "qwen3.7-plus|qwen3.7-plus": 0.6779141104294478,
+            "qwen3.7-max|qwen3.7-max": 0.7653374233128835,
+            "qwen3.7-plus|deepseek-v4-flash-0731": 0.6840490797546013,
+            "qwen3.7-plus|qwen3.7-max": 0.6702453987730062,
+            "qwen3.7-max|deepseek-v4-flash-0731": 0.7576687116564417,
+            "deepseek-v4-flash-0731|deepseek-v4-flash-0731": 0.8236196319018405,
+            "deepseek-v4-flash-0731|deepseek-v4-pro-0813": 0.8266871165644172,
+            "deepseek-v4-flash-0731|qwen3.7-plus": 0.8312883435582822,
+            "deepseek-v4-flash-0731|qwen3.7-max": 0.8174846625766872,
+            "qwen3.7-max|qwen3.7-plus": 0.7638036809815951,
+            "qwen3.7-max|deepseek-v4-pro-0813": 0.7699386503067485,
+            "deepseek-v4-pro-0813|deepseek-v4-pro-0813": 0.74079754601227,
+            "deepseek-v4-pro-0813|qwen3.7-max": 0.74079754601227,
+            "deepseek-v4-pro-0813|deepseek-v4-flash-0731": 0.7438650306748467,
+            "deepseek-v4-pro-0813|qwen3.7-plus": 0.7515337423312883,
+            "qwen3.7-plus|deepseek-v4-pro-0813": 0.691717791411043
+          },
+          "accuracy": 0.7535467791411044,
+          "sender_marginal": {
+            "deepseek-v4-flash-0731": 0.8247699386503068,
+            "deepseek-v4-pro-0813": 0.7442484662576687,
+            "qwen3.7-max": 0.7641871165644172,
+            "qwen3.7-plus": 0.6809815950920246
+          },
+          "receiver_marginal": {
+            "deepseek-v4-flash-0731": 0.7523006134969326,
+            "deepseek-v4-pro-0813": 0.7572852760736196,
+            "qwen3.7-max": 0.7484662576687117,
+            "qwen3.7-plus": 0.7561349693251533
+          },
+          "ss": {
+            "sender": 0.04215247915804131,
+            "receiver": 0.00019215885994956335,
+            "residual": 0.0003118354567352931
+          },
+          "variance_share": {
+            "sender": 0.9881848105192411,
+            "receiver": 0.004504799489892594,
+            "residual": 0.007310389990866327
+          },
+          "variance_component": {
+            "sender": 0.003504044500483018,
+            "receiver": 7.351142308705472e-06,
+            "residual": 3.464838408169923e-05
+          },
+          "spread": {
+            "sender": 0.14378834355828218,
+            "receiver": 0.008819018404907952
+          },
+          "best_cell": [
+            "deepseek-v4-flash-0731",
+            "qwen3.7-plus"
+          ],
+          "best_cell_accuracy": 0.8312883435582822,
+          "self_accuracy": 0.7519171779141105,
+          "cross_accuracy": 0.7540899795501023,
+          "per_sender_best_receiver": {
+            "deepseek-v4-flash-0731": "qwen3.7-plus",
+            "deepseek-v4-pro-0813": "qwen3.7-plus",
+            "qwen3.7-max": "deepseek-v4-pro-0813",
+            "qwen3.7-plus": "deepseek-v4-pro-0813"
+          },
+          "per_sender_best_is_self": {
+            "deepseek-v4-flash-0731": false,
+            "deepseek-v4-pro-0813": false,
+            "qwen3.7-max": false,
+            "qwen3.7-plus": false
+          },
+          "bootstrap_share_ci": {
+            "sender": {
+              "ci95": [
+                0.9234790773104579,
+                0.9927273242791119
+              ]
+            },
+            "receiver": {
+              "ci95": [
+                0.0011209847745491121,
+                0.046967959673755555
+              ]
+            },
+            "residual": {
+              "ci95": [
+                0.0038902312271371173,
+                0.037565180376715905
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

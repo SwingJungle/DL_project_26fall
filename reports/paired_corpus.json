@@ -1,0 +1,317 @@
+{
+  "a": {
+    "path": "data/_v3_paired/base",
+    "target_bpf": 133.0,
+    "n_docs": 200,
+    "n_questions": 2199,
+    "n_multi_hop": 400,
+    "bpf_mean": 127.7,
+    "bpf_min": 125.4,
+    "bpf_max": 130.2,
+    "wpf_mean": 21.03,
+    "wpf_min": 19.0,
+    "wpf_max": 22.25,
+    "validate_problems": 0,
+    "n_denial_template_docs": 7,
+    "example_problems": [],
+    "sha256": {
+      "docs": "17d62ffe196dec8ff5427a1a83a8e57a9172dd8c6ddd633f8821ca7623561cb1",
+      "questions": "234aeb588cf99290772e89ca060bc938046b0ac3c5831970801bcca7ced8c998"
+    }
+  },
+  "b": {
+    "path": "data/_v3_paired/b100",
+    "target_bpf": 100.0,
+    "n_docs": 200,
+    "n_questions": 2199,
+    "n_multi_hop": 400,
+    "bpf_mean": 97.5,
+    "bpf_min": 95.6,
+    "bpf_max": 99.3,
+    "wpf_mean": 16.13,
+    "wpf_min": 14.89,
+    "wpf_max": 17.38,
+    "validate_problems": 0,
+    "n_denial_template_docs": 33,
+    "example_problems": [],
+    "sha256": {
+      "docs": "7bfb569acc095814091e654b516635c89728a690827aa9692239e999d9290196",
+      "questions": "234aeb588cf99290772e89ca060bc938046b0ac3c5831970801bcca7ced8c998"
+    }
+  },
+  "checks": [
+    {
+      "check": "same_doc_ids",
+      "ok": true,
+      "detail": "200 vs 200 docs; order identical",
+      "data": {
+        "a": 200,
+        "b": 200,
+        "missing_in_b": []
+      }
+    },
+    {
+      "check": "same_split",
+      "ok": true,
+      "detail": "split labels agree per doc_id",
+      "data": {
+        "a": {
+          "eval": 145,
+          "pilot": 25,
+          "dev": 30
+        },
+        "b": {
+          "eval": 145,
+          "pilot": 25,
+          "dev": 30
+        }
+      }
+    },
+    {
+      "check": "same_fact_metadata",
+      "ok": true,
+      "detail": "1799 vs 1799 facts; 0 problems",
+      "data": {
+        "examples": []
+      }
+    },
+    {
+      "check": "texts_differ_everywhere",
+      "ok": true,
+      "detail": "0 doc(s) with identical text; 1701/1799 facts re-rendered",
+      "data": {
+        "identical_docs": 0,
+        "differing_facts": 1701,
+        "n_facts": 1799
+      }
+    },
+    {
+      "check": "questions_verbatim_identical",
+      "ok": true,
+      "detail": "file hash identical; 0 field problems",
+      "data": {
+        "examples": [],
+        "sha256_a": "234aeb588cf99290772e89ca060bc938046b0ac3c5831970801bcca7ced8c998",
+        "sha256_b": "234aeb588cf99290772e89ca060bc938046b0ac3c5831970801bcca7ced8c998"
+      }
+    },
+    {
+      "check": "question_gold_matches_facts",
+      "ok": true,
+      "detail": "0 problems across both densities",
+      "data": {
+        "examples": []
+      }
+    },
+    {
+      "check": "schema_consistent",
+      "ok": true,
+      "detail": "0 problems",
+      "data": {
+        "examples": []
+      }
+    },
+    {
+      "check": "validate_zero_problems_a",
+      "ok": true,
+      "detail": "0 problems at target bpf 133",
+      "data": {
+        "examples": []
+      }
+    },
+    {
+      "check": "bytes_per_fact_in_band_a",
+      "ok": true,
+      "detail": "mean 127.7 B/fact (target 133 ±10%)",
+      "data": {
+        "out_of_band": [],
+        "n_out": 0
+      }
+    },
+    {
+      "check": "multi_hop_cross_sentence_a",
+      "ok": true,
+      "detail": "0 multi-hop question(s) inside one sentence",
+      "data": {
+        "examples": []
+      }
+    },
+    {
+      "check": "no_duplicate_docs_a",
+      "ok": true,
+      "detail": "0 duplicated document text(s)",
+      "data": {
+        "examples": []
+      }
+    },
+    {
+      "check": "validate_zero_problems_b",
+      "ok": true,
+      "detail": "0 problems at target bpf 100",
+      "data": {
+        "examples": []
+      }
+    },
+    {
+      "check": "bytes_per_fact_in_band_b",
+      "ok": true,
+      "detail": "mean 97.5 B/fact (target 100 ±10%)",
+      "data": {
+        "out_of_band": [],
+        "n_out": 0
+      }
+    },
+    {
+      "check": "multi_hop_cross_sentence_b",
+      "ok": true,
+      "detail": "0 multi-hop question(s) inside one sentence",
+      "data": {
+        "examples": []
+      }
+    },
+    {
+      "check": "no_duplicate_docs_b",
+      "ok": true,
+      "detail": "0 duplicated document text(s)",
+      "data": {
+        "examples": []
+      }
+    },
+    {
+      "check": "density_contrast",
+      "ok": true,
+      "detail": "base - b100 = 30.2 B/fact (4.9 words/fact)",
+      "data": {
+        "gap_bpf": 30.2,
+        "gap_wpf": 4.9,
+        "ratio": 0.31
+      }
+    }
+  ],
+  "passed": true,
+  "n_checks": 16,
+  "n_failed": 0,
+  "premise_flags": {
+    "a": [
+      {
+        "doc_id": "p-0019",
+        "qid": "p-0019-q8",
+        "question": "Which came first, the Leonziam Survey relocation to Tusgiam or the winter resupply planned for 2051?",
+        "gold": "the winter resupply",
+        "source_sentence": "Paenbul Lanraend said the winter resupply would not arrive in 2051."
+      },
+      {
+        "doc_id": "p-0059",
+        "qid": "p-0059-q12",
+        "question": "Which came first, the Limkal Foundation relocation to Memdun or the east wing planned for 2040?",
+        "gold": "the east wing",
+        "source_sentence": "Norgi Dimfaend said the east wing would not arrive in 2040."
+      },
+      {
+        "doc_id": "p-0105",
+        "qid": "p-0105-q3",
+        "question": "Which came first, the Sezil Survey relocation to Feolkor or the winter resupply planned for 2053?",
+        "gold": "the winter resupply",
+        "source_sentence": "Ruleon Mampum said the winter resupply would not arrive in 2053."
+      },
+      {
+        "doc_id": "p-0162",
+        "qid": "p-0162-q9",
+        "question": "Which came first, the Folzoth Bureau relocation to Porril or the digitisation wave planned for 2035?",
+        "gold": "the digitisation wave",
+        "source_sentence": "Nalfiand Rispeth said the digitisation wave would not arrive in 2035."
+      }
+    ],
+    "b": [
+      {
+        "doc_id": "p-0009",
+        "qid": "p-0009-q10",
+        "question": "Which came first, the Fiamnen Institute relocation to Norben or the northern annex planned for 2042?",
+        "gold": "the northern annex",
+        "source_sentence": "Maethbiam Liankeo said the northern annex would not arrive in 2042."
+      },
+      {
+        "doc_id": "p-0020",
+        "qid": "p-0020-q4",
+        "question": "Which came first, the Kitia Foundation relocation to Teothsond or the winter resupply planned for 2047?",
+        "gold": "the winter resupply",
+        "source_sentence": "Nendsos Gemkos said the winter resupply would not arrive in 2047."
+      },
+      {
+        "doc_id": "p-0025",
+        "qid": "p-0025-q1",
+        "question": "Which came first, the Pendbel Foundation relocation to Kunfias or the southern traverse planned for 2048?",
+        "gold": "the southern traverse",
+        "source_sentence": "Tialtur Fesvoth said the southern traverse would not arrive in 2048."
+      },
+      {
+        "doc_id": "p-0055",
+        "qid": "p-0055-q1",
+        "question": "Which came first, the Pigund Foundation relocation to Memgand or the loan programme planned for 2041?",
+        "gold": "the loan programme",
+        "source_sentence": "Nelkath Laethnaem said the loan programme would not arrive in 2041."
+      },
+      {
+        "doc_id": "p-0067",
+        "qid": "p-0067-q4",
+        "question": "Which came first, the Zeonund Guild relocation to Biamlan or the second phase planned for 2050?",
+        "gold": "the second phase",
+        "source_sentence": "Gulkeo Mindfond said the second phase would not arrive in 2050."
+      },
+      {
+        "doc_id": "p-0085",
+        "qid": "p-0085-q6",
+        "question": "Which came first, the Vaemdu Survey relocation to Nethfeom or the winter resupply planned for 2053?",
+        "gold": "the winter resupply",
+        "source_sentence": "Diasnim Bamkor said the winter resupply would not arrive in 2053."
+      },
+      {
+        "doc_id": "p-0101",
+        "qid": "p-0101-q10",
+        "question": "Which came first, the Supeol Consortium relocation to Rindran or the second phase planned for 2053?",
+        "gold": "the second phase",
+        "source_sentence": "Femfi Tiathrand said the second phase would not arrive in 2053."
+      },
+      {
+        "doc_id": "p-0110",
+        "qid": "p-0110-q8",
+        "question": "Which came first, the Vusgiath Survey relocation to Gaethvin or the southern traverse planned for 2042?",
+        "gold": "the southern traverse",
+        "source_sentence": "Miamun Reltoth said the southern traverse would not arrive in 2042."
+      },
+      {
+        "doc_id": "p-0117",
+        "qid": "p-0117-q5",
+        "question": "Which came first, the Leossond Institute relocation to Dolvol or the coastal extension planned for 2046?",
+        "gold": "the coastal extension",
+        "source_sentence": "Gargaer Tolder said the coastal extension would not arrive in 2046."
+      },
+      {
+        "doc_id": "p-0159",
+        "qid": "p-0159-q6",
+        "question": "Which came first, the Bathbaeth Survey relocation to Zamsend or the coastal extension planned for 2049?",
+        "gold": "the coastal extension",
+        "source_sentence": "Gumtind Morkeol said the coastal extension would not arrive in 2049."
+      },
+      {
+        "doc_id": "p-0176",
+        "qid": "p-0176-q6",
+        "question": "Which came first, the Laessu Survey relocation to Ropiar or the second survey planned for 2048?",
+        "gold": "the second survey",
+        "source_sentence": "Peonlen Mantaeth said the second survey would not arrive in 2048."
+      },
+      {
+        "doc_id": "p-0187",
+        "qid": "p-0187-q4",
+        "question": "Which came first, the Zurlaem Institute relocation to Bune or the northern annex planned for 2040?",
+        "gold": "the northern annex",
+        "source_sentence": "Raethpaem Niandvand said the northern annex would not arrive in 2040."
+      }
+    ]
+  },
+  "generator": {
+    "seed_b100": 20261111,
+    "bpf_b": 100.0,
+    "bpf_a": 133.0
+  }
+}
