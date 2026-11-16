@@ -1,5 +1,6 @@
 """Adapter tests with a mocked transport: no network, no real credentials."""
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -29,6 +30,15 @@ def _fake_body(payload, model=None, content='{"ok":true}'):
 class TestAdapter(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
+        # Dummy credentials: the transport below is mocked, so these are never
+        # sent anywhere. Without them the suite would only pass on a machine
+        # that happens to have Qwen.txt/.env, which a reviewer's clone does not.
+        env = mock.patch.dict(os.environ, {
+            "DSL_BASE_URL": "https://example.invalid/v1",
+            "DSL_API_KEY": "test-key",
+        })
+        env.start()
+        self.addCleanup(env.stop)
         root = Path(self.tmp.name)
         self.ctx = adapters.RunContext(
             run_id="test",
